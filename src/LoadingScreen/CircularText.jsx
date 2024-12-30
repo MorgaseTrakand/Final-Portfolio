@@ -46,7 +46,7 @@ function CircularText( { isLoaded } ) {
           },
           {
             originValue: 100,
-            duration: 0.5,
+            duration: 0.9,
             ease: "power1.inOut",
             onUpdate: () => {
               const transformOrigin = `0 ${data.originValue}vh`;

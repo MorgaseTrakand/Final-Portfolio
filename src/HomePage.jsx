@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import LoadingScreen from './LoadingScreen/LoadingScreen';
 import LandingPage from './LandingPage/LandingPage';
+import PinnedText from './PinnedText/PinnedText';
 
 function HomePage() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -14,6 +15,8 @@ function HomePage() {
     <>
       <LoadingScreen isLoaded={isLoaded}/>
       <LandingPage isLoaded={isLoaded}/>
+      <PinnedText />
+      <ThreeJS />
     </>    
   )
 }

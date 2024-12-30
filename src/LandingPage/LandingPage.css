@@ -8,6 +8,8 @@
   -webkit-mask: radial-gradient(circle, black 0vw, transparent 0vw);
   mask-size: 100%;
   -webkit-mask-size: 100%;
+  -webkit-mask-border: 1px solid black;
+  mask-border: 1px solid black;
   height: 100vh;
   width: 100%;
   background-color: white;

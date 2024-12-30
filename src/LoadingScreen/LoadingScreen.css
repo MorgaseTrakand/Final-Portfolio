@@ -123,3 +123,13 @@ svg path {
   margin-top: 10px;
   margin-left: 120px;
 }
+.mask-border {
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 0vw;
+  width: 0vw;
+  border-radius: 50%;
+}

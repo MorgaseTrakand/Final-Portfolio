@@ -22,6 +22,7 @@ function LoadingScreen( { isLoaded } ) {
               <Ethan />
               <Snyder />
             </div>
+            <div className='mask-border'></div>
           </div>
         </div>
       </div>

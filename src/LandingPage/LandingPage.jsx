@@ -7,15 +7,18 @@ function LandingPage( { isLoaded } ) {
   useEffect(() => {
     if (isLoaded) {
       const maskElement = document.querySelector('.landing-page');
+      const maskBorder = document.querySelector('.mask-border')
       const maskPercentage = { percent: 0 };
       gsap.to(maskPercentage,
         {
-          percent: 100,
-          duration: 0.6,
+          percent: 200,
+          duration: 1,
           ease: "power1.inOut",
           onUpdate: () => {
-            maskElement.style.mask = `radial-gradient(circle, black ${maskPercentage.percent}vw, transparent 0vw)`;
-            maskElement.style.webkitMask = `radial-gradient(circle, black ${maskPercentage.percent}vw, transparent 0vw)`;
+            maskBorder.style.height = `${maskPercentage.percent+0.15}vw`
+            maskBorder.style.width = `${maskPercentage.percent+0.15}vw`
+            maskElement.style.mask = `radial-gradient(circle, black ${maskPercentage.percent/2}vw, transparent 0vw)`;
+            maskElement.style.webkitMask = `radial-gradient(circle, black ${maskPercentage.percent/2}vw, transparent 0vw)`;
           }
         }
       )
