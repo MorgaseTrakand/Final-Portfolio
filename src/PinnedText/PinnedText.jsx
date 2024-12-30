@@ -1,14 +1,18 @@
 import { useEffect, useState } from 'react';
-import './pinnedText.css';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 function PinnedText() {
+  useGSAP(() => {
+    
+  });
 
   return (
-    <>
-      <div className='pinned-text-body'>
-        <h1>Dedicated to crafting sleek and fluid web experiences, I excel at making beautiful <span className='gold-highlights'>typographical animations . . .</span></h1>
-      </div>
-    </>    
+      <h1 className='pinned-text'>Dedicated to crafting sleek and fluid web experiences, I excel at making beautiful typographical animations . . .</h1>
   )
 }
 export default PinnedText;
