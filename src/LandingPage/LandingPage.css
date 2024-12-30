@@ -1,0 +1,258 @@
+:root {
+  --gradient1: #FFBF44;
+  --gradient2: #f8aa1b;
+  --fontcolor: #1A1A1A;
+}
+.landing-page {
+  mask: radial-gradient(circle, black 0vw, transparent 0vw);
+  -webkit-mask: radial-gradient(circle, black 0vw, transparent 0vw);
+  mask-size: 100%;
+  -webkit-mask-size: 100%;
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  position: relative;
+}
+.top-half {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.text-container {
+  width: 95%;
+}
+.text-container2 {
+  width: 70%;
+}
+.top-half h1 {
+  line-height: 1.2;
+  text-align: center;
+  color: var(--fontcolor);
+  font-family: "Poppins", sans-serif;
+  font-size: 80px;
+  font-weight: 500;
+  position: relative;
+  user-select: none;
+}
+.border {
+  overflow: hidden;
+}
+.bottom-half {
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+}
+.bottom-half h2 {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #1a1a1a;
+  font-weight: 300;
+  font-size: 24px;
+  margin-top: 2vh;
+  position: relative;
+  user-select: none;
+}
+.left {
+  background: linear-gradient(to right, var(--gradient2), var(--gradient1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* Add for broader support */
+  text-fill-color: transparent;
+  position: relative;
+  background-size: 200% 100%; /* Make the gradient twice as wide as the text */
+  animation: shiftBackground2 2.5s linear infinite;
+}
+.right {
+  background: linear-gradient(to right, var(--gradient1), var(--gradient2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  position: relative;
+  background-size: 200% 100%; /* Make the gradient twice as wide as the text */
+  animation: shiftBackground 2.5s linear infinite;
+}
+.scroll-notice {
+  position: absolute;
+  width: 100%;
+  bottom: 3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scroll-notice h1 {
+  color: var(--fontcolor);
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+@keyframes shiftBackground {
+  0% {
+      background-position: 100% 0%;
+  }
+  50% {
+      background-position: 0% 0%;
+  }
+  100% {
+  background-position: 100% 0%;
+  }
+}
+
+@keyframes shiftBackground2 {
+  0% {
+      background-position: 0% 0%;
+  }
+  50% {
+      background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@media screen and (max-width: 1430px) {
+  .top-half h1 {
+      font-size: calc(112.5% + 5vw);
+  }
+  .bottom-half h2 {
+      font-size: calc(112.5% + 0.8vw);
+  }
+  .link-container {
+      width: 30%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .top-half {
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .link-container {
+      width: 40%;
+  }
+}
+@media screen and (max-width: 720px) {
+  .link-container {
+      display: none;
+  }
+  .hamburger {
+      display: flex !important;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+  }
+}
+@media screen and (max-width: 512px) {
+  .cursor {
+      display: none;
+  }
+  .cursor-small {
+      display: none;
+  }
+  .text-container {
+      transform: translateY(-40px);
+  }
+  .bottom-half {
+      transform: translateY(-40px);
+  }
+  .top-half h1 {
+      font-size: 40px;
+      font-weight: 400;
+  }
+  .bottom-half h2 {
+      font-size: 18px;
+      font-weight: 300;
+  }
+}
+@media screen and (max-width: 400px) {
+  .text-container {
+      transform: translateY(-1px);
+  }
+  .bottom-half {
+      transform: translateY(-1px);
+  }
+  .top-half h1 {
+      font-size: 38px;
+  }
+  .bottom-half h2 {
+      font-size: 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+.header {
+  height: 12vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.header-wrapper {
+  width: 95%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  background-color: #030303;
+  background-color: white;
+}
+.link-container {
+  height: 100%;
+  width: 22%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 30px;
+}
+.navitem {
+  color: var(--fontcolor);
+  font-family: "Stick No Bills", "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+a {
+  color: inherit;
+}
+.contact-button {
+  background-color: var(--gradient1);
+  padding: 8px 20px;
+  border-radius: 4px;
+  position: relative;
+  color: black;
+}
+.logo {
+  cursor: pointer;
+  color: var(--fontcolor);
+  font-size: 44px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  transform: translateX(-30px);
+  opacity: 0;
+  user-select: none;
+  z-index: 100;
+}
+.hamburger {
+  height: 22px;
+  width: 40px;
+  cursor: pointer;
+  transform: translateX(20px);
+  opacity: 0;
+  z-index: 100;
+  display: none;
+}
+.hamburger-bar {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+}
