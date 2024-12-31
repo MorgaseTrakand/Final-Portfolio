@@ -10,7 +10,7 @@ function ThreeJS() {
     <>
       <div className='canvas-container'>
         <Canvas style={{ backgroundColor: "black" }}>
-          {/* <directionalLight intensity={3} position{[0, 3, 2]} /> */}
+          <directionalLight intensity={3} position={[0, 3, 2]} />
           <Environment preset='city'/>
           <Model />
         </Canvas>

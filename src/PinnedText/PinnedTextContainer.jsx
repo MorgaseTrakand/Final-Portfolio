@@ -2,12 +2,14 @@
   import './pinnedText.css';
   import gsap from 'gsap';
   import ScrollTrigger from 'gsap/ScrollTrigger';
+  import PinnedText from './PinnedText';
   import { useGSAP } from '@gsap/react';
 
   gsap.registerPlugin(useGSAP);
   gsap.registerPlugin(ScrollTrigger);
 
   function PinnedTextContainer() {
+    const [spans, setSpans] = useState(null);
 
     useGSAP(() => {
       const text = document.querySelector('.pinned-text');
@@ -16,14 +18,18 @@
           return `<span class="letter">${letter}</span>`;
         }).join('')}</span>`;
       }).join(' ');
-
-      const spans = text.querySelectorAll('span');
-      spans.forEach((span, index) => {
+      text.innerHTML += `<span class="word">
+        <span class="letter">.</span>&nbsp;
+        <span class="letter">.</span>&nbsp;
+        <span class="letter">.</span>
+      </span>`;
+      const currentSpans = text.querySelectorAll('span');
+      currentSpans.forEach((span, index) => {
         if (index > 82) {
           span.classList.add('gold-highlights');
         }
       })
-
+      setSpans(gsap.utils.toArray('.letter'))
       gsap.to('.pinned-text-container',
         {
           scrollTrigger: {
@@ -41,7 +47,7 @@
       <>
         <div className='pinned-text-body'>
           <div className='pinned-text-container'>
-            <h1 className='pinned-text'>Dedicated to crafting sleek and fluid web experiences, I excel at making beautiful typographical animations . . .</h1>
+            <PinnedText spans={spans}/>
           </div>
         </div>
         <div className='onevh'></div>

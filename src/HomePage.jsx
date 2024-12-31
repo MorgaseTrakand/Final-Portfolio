@@ -17,7 +17,7 @@ function HomePage() {
       <LoadingScreen isLoaded={isLoaded}/>
       <LandingPage isLoaded={isLoaded}/>
       <PinnedTextContainer />
-      {/* <ThreeJS /> */}
+      <ThreeJS />
     </>    
   )
 }

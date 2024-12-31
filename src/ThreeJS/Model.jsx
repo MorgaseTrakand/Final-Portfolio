@@ -3,14 +3,14 @@ import { MeshTransmissionMaterial, useGLTF, Text, OrbitControls } from '@react-t
 import { useFrame, useThree } from '@react-three/fiber';
 
 function Model() {
-  const { nodes } = useGLTF('TorusKnot.glb');
+  const { nodes } = useGLTF('Sphere.glb');
   const { viewport } = useThree();
   const mesh = useRef()
 
-  useFrame(() => {
-    mesh.current.rotation.z += 0.02
-    mesh.current.rotation.x += 0.02
-  });
+  // useFrame(() => {
+  //   mesh.current.rotation.z += 0.02
+  //   mesh.current.rotation.x += 0.02
+  // });
 
   return (
     <>
@@ -18,7 +18,7 @@ function Model() {
         <Text fontSize={2} anchorX="center" anchorY="middle" position={[0, 0, -4]}>
           Eye-Catching{'\n'}3D Animations
         </Text>
-        <mesh ref={mesh} {...nodes.TorusKnot001} position={[0, 0, 0]}>
+        <mesh ref={mesh} {...nodes.Sphere} position={[0, 0, 0]} scale={3}>
           <MeshTransmissionMaterial 
               thickness={1}
               roughness={0.1}
