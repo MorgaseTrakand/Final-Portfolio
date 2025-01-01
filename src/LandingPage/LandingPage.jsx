@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import './LandingPage.css';
 import Header from '../Header/Header';
 import ScrollNotice from './ScrollNotice';
+import DoubleTextAnimation from '../HelperComponents/DoubleTextAnimation';
 
 function LandingPage( { isLoaded } ) {
   useEffect(() => {
@@ -85,7 +86,9 @@ function LandingPage( { isLoaded } ) {
                 </h2>
             </div>
         </div>
-        <ScrollNotice />
+        <div className='absolutely-positioned'>
+          <DoubleTextAnimation string={'(scroll to discover)'} className={"scroll-notice"}/>
+        </div>
       </section> 
     </>   
   )

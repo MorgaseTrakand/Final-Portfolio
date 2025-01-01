@@ -230,8 +230,8 @@
 }
 .navitem {
   color: var(--fontcolor);
-  font-family: "Stick No Bills", "Poppins", sans-serif;
-  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
   font-weight: 400;
 }
 a {
@@ -247,7 +247,7 @@ a {
 .logo {
   cursor: pointer;
   color: var(--fontcolor);
-  font-size: 44px;
+  font-size: 40px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   transform: translateX(-30px);
