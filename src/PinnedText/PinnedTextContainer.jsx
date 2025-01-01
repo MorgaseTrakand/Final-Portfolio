@@ -50,7 +50,6 @@
             <PinnedText spans={spans}/>
           </div>
         </div>
-        <div className='onevh'></div>
       </>    
     )
   }

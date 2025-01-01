@@ -23,6 +23,7 @@ function CircularText( { isLoaded } ) {
 
   useEffect(() => {
     if (isLoaded) {
+      console.log('loaded')
       gsap.killTweensOf('.circular-text');
       const currentRotation = getCurrentRotation(document.querySelector('.circular-text')) + 360;
       const data = { originValue: 35 };

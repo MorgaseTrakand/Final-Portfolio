@@ -8,17 +8,31 @@ function HomePage() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    setTimeout(function() {
-      setIsLoaded(true)
-    }, 3000)
-  })
+    history.scrollRestoration = 'manual';
+    document.body.style.overflow = 'hidden';
+    document.body.style.height = '100vh';
+
+    const timer = setTimeout(() => {
+      console.log('Setting isLoaded to true');
+      setIsLoaded(true);
+      document.body.style.height = 'auto';
+      document.body.style.overflow = '';
+    }, 3000);
+
+    return () => {
+      // Clear the timer on component unmount
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <>
-      <LoadingScreen isLoaded={isLoaded}/>
-      <LandingPage isLoaded={isLoaded}/>
+      <LoadingScreen isLoaded={isLoaded} />
+      <LandingPage isLoaded={isLoaded} />
       <PinnedTextContainer />
       <ThreeJS />
-    </>    
-  )
+    </>
+  );
 }
+
 export default HomePage;

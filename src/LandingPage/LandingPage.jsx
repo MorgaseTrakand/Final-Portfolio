@@ -2,10 +2,12 @@ import { useEffect, useState } from 'react';
 import gsap from 'gsap';
 import './LandingPage.css';
 import Header from '../Header/Header';
+import ScrollNotice from './ScrollNotice';
 
 function LandingPage( { isLoaded } ) {
   useEffect(() => {
     if (isLoaded) {
+      document.querySelector('.landing-page').style.pointerEvents = "all";
       const maskElement = document.querySelector('.landing-page');
       const maskBorder = document.querySelector('.mask-border')
       const maskPercentage = { percent: 0 };
@@ -59,6 +61,7 @@ function LandingPage( { isLoaded } ) {
           autoAlpha: 1
         }
       )
+
     }
   }, [isLoaded])
   return (
@@ -82,7 +85,7 @@ function LandingPage( { isLoaded } ) {
                 </h2>
             </div>
         </div>
-        <div className="scroll-notice"><h1>(scroll to discover)</h1></div>
+        <ScrollNotice />
       </section> 
     </>   
   )

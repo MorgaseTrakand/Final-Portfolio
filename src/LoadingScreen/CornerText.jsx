@@ -20,16 +20,6 @@ function CornerText() {
       });
     })
     
-    gsap.fromTo('.top-left-text', 
-      {
-        y: '100%'
-      },
-      {
-        y: '0%',
-        duration: 0.4,
-        ease: 'power1.inOut',
-      }
-    );
     gsap.fromTo('.bottom-left-text', 
       {
         y: '-100%'

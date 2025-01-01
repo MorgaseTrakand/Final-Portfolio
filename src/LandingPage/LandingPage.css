@@ -14,6 +14,7 @@
   width: 100%;
   background-color: white;
   position: relative;
+  pointer-events: none;
 }
 .top-half {
   height: 60vh;
@@ -28,7 +29,7 @@
   width: 70%;
 }
 .top-half h1 {
-  line-height: 1.2;
+  line-height: 1.3;
   text-align: center;
   color: var(--fontcolor);
   font-family: "Poppins", sans-serif;
@@ -75,20 +76,31 @@
   background-size: 200% 100%; /* Make the gradient twice as wide as the text */
   animation: shiftBackground 2.5s linear infinite;
 }
-.scroll-notice {
+.scroll-notice, .scroll-hidden {
+  cursor: pointer;
+  color: var(--fontcolor);
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 300; 
+}
+.scroll-text-mask {
+  overflow: hidden;
+  position: relative;
+}
+.scroll-hidden {
+  position: absolute;
+}
+.scroll-hidden span, .scroll-notice span {
+  display: inline-block;
+}
+.absolutely-positioned {
   position: absolute;
   width: 100%;
   bottom: 3vh;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.scroll-notice h1 {
-  color: var(--fontcolor);
-  color: black;
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
-  font-weight: 300;
 }
 @keyframes shiftBackground {
   0% {
