@@ -21,18 +21,8 @@
   font-weight: 500;
   cursor: pointer;
 }
-.corner-text-span {
-  display: inline-block;
-}
-.hidden-corner-text {
-  font-family: 'Stick No Bills', sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
+.topLeft, .topRight, .bottomLeft, .bottomRight {
   position: absolute;
-}
-.absolute-hidden-text {
-  display: inline-block;
 }
 .topLeft {
   top: 20px;
@@ -49,10 +39,6 @@
 .bottomRight {
   bottom: 20px;
   right: 20px;
-}
-.text-mask {
-  overflow: hidden;
-  position: absolute;
 }
 .radial-one {
   height: 90vh;
@@ -78,14 +64,6 @@
   transform-origin: 0 45vh;
   display: inline-block;
   top: -45vh;
-}
-@keyframes rotate {
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
 }
 .radial-two {
   height: 90%;

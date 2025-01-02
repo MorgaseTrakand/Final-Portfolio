@@ -11,10 +11,11 @@ function DoubleTextAnimation({ string, className }) {
     const firstText = firstTextRef.current;
     const secondText = secondTextRef.current;
 
-    // Replace each character in the text with a span
     const wrapText = (element) => {
       element.innerHTML = element.textContent.replace(/\S|\s/g, (match) => {
-        return match === ' ' ? `<span>&nbsp;</span>` : `<span>${match}</span>`;
+        return match === ' '
+          ? `<span style="display: inline-block;">&nbsp;</span>`
+          : `<span style="display: inline-block;">${match}</span>`;
       });
     };
 
@@ -26,6 +27,7 @@ function DoubleTextAnimation({ string, className }) {
 
     // Add event listeners for hover animation
     const handleMouseEnter = () => {
+      console.log(firstSpans)
       gsap.to(firstSpans, {
         y: '-100%',
         duration: 0.15,

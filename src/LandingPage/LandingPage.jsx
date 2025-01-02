@@ -55,14 +55,6 @@ function LandingPage( { isLoaded } ) {
           rotation: 8,
         }
       )
-      gsap.to('.logo', 
-        {
-          x: 30,
-          duration: 0.8,
-          autoAlpha: 1
-        }
-      )
-
     }
   }, [isLoaded])
   return (

@@ -1,17 +1,33 @@
 import { useEffect, useState } from 'react';
 import gsap from 'gsap';
+import DoubleTextAnimation from '../HelperComponents/DoubleTextAnimation';
+import './Header.css'
 
 function Header( { isLoaded } ) {
 
   return (
     <div className="header">
       <div className="header-wrapper">
-          <a href="index.html"><div className="logo cursor-scale small">ETHAN SNYDER</div></a>
+          <a>
+            <DoubleTextAnimation string={'ETHAN SNYDER'} className={"logo"}/>
+          </a>
           <div className="link-container">
-              <div className="navitem cursor-scale small"><a href="#">About</a></div>
-              <div className="navitem cursor-scale small"><a href="#">Work</a></div>
+              <div className='navitem'>
+                <a>
+                  <DoubleTextAnimation string={'About'} className={""}/>
+                </a>
+              </div>
+              <div className='navitem'>
+                <a>
+                  <DoubleTextAnimation string={'Work'} className={""}/>
+                </a>
+              </div>              
               <div className="contact-button navitem">
-                  <a href="#">Contact</a>
+                <div className='navitem'>
+                  <a>
+                    <DoubleTextAnimation string={'Contact'} className={""}/>
+                  </a>
+              </div>
               </div>
           </div>
       </div>
