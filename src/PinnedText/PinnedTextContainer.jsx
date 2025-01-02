@@ -34,11 +34,11 @@
         {
           scrollTrigger: {
             trigger: '.pinned-text-body',
-            start: "top top",
+            start: "top 20%",
             end: "bottom bottom",
             pin: true,
             pinSpacing: false,
-            anticipatePin: 1
+            anticipatePin: 1,
           },
         }
       )

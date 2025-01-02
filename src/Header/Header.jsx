@@ -14,14 +14,9 @@ function Header( { isLoaded } ) {
           <div className="link-container">
               <div className='navitem'>
                 <a>
-                  <DoubleTextAnimation string={'About'} className={""} stagger={0.03}/>
+                  <DoubleTextAnimation string={'Resume'} className={""} stagger={0.03}/>
                 </a>
-              </div>
-              <div className='navitem'>
-                <a>
-                  <DoubleTextAnimation string={'Work'} className={""} stagger={0.03}/>
-                </a>
-              </div>              
+              </div>             
               <div className="contact-button navitem">
                 <div className='navitem'>
                   <a>

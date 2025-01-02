@@ -11,16 +11,15 @@ function HomePage() {
     history.scrollRestoration = 'manual';
     document.body.style.overflow = 'hidden';
     document.body.style.height = '100vh';
+    window.scrollTo(0, 0);
 
     const timer = setTimeout(() => {
-      console.log('Setting isLoaded to true');
       setIsLoaded(true);
       document.body.style.height = 'auto';
       document.body.style.overflow = '';
     }, 3000);
 
     return () => {
-      // Clear the timer on component unmount
       clearTimeout(timer);
     };
   }, []);

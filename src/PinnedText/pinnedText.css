@@ -5,6 +5,8 @@
   position: relative;
 }
 .pinned-text-container {
+  position: absolute;
+  top: -20vh;
   height: 100vh;
   width: 100%;
   display: flex;

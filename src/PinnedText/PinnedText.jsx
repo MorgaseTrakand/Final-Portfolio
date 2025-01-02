@@ -25,7 +25,7 @@ function PinnedText( { spans } ) {
           },
           scrollTrigger: {
             trigger: '.pinned-text-body',
-            start: 'top top',
+            start: 'top 20%',
             end: 'bottom bottom',
             scrub: 'true'
           }

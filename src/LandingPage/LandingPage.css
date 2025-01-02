@@ -133,9 +133,6 @@
   .bottom-half h2 {
       font-size: calc(112.5% + 0.8vw);
   }
-  .link-container {
-      width: 30%;
-  }
 }
 @media screen and (max-width: 850px) {
   .top-half {
@@ -143,13 +140,10 @@
     padding-left: 20px;
     padding-right: 20px;
   }
-  .link-container {
-      width: 40%;
-  }
 }
 @media screen and (max-width: 720px) {
   .link-container {
-      display: none;
+      display: none !important;
   }
   .hamburger {
       display: flex !important;
