@@ -5,7 +5,7 @@
   top: 0;
 }
 .header-wrapper {
-  width: 95%;
+  width: 90%;
   height: 100%;
   margin: auto;
   position: relative;
@@ -22,7 +22,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 30px;
 }
 .navitem h2 {
   color: var(--fontcolor);

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
-function DoubleTextAnimation({ string, className }) {
+function DoubleTextAnimation({ string, className, stagger }) {
   const maskRef = useRef(null);
   const firstTextRef = useRef(null);
   const secondTextRef = useRef(null);
@@ -32,13 +32,13 @@ function DoubleTextAnimation({ string, className }) {
         y: '-100%',
         duration: 0.15,
         ease: 'power1.inOut',
-        stagger: 0.01,
+        stagger: stagger,
       });
       gsap.to(secondSpans, {
         y: '-100%',
         duration: 0.15,
         ease: 'power1.inOut',
-        stagger: 0.01,
+        stagger: stagger,
       });
     };
 
@@ -47,13 +47,13 @@ function DoubleTextAnimation({ string, className }) {
         y: 0,
         duration: 0.15,
         ease: 'power1.inOut',
-        stagger: 0.01,
+        stagger: stagger,
       });
       gsap.to(secondSpans, {
         y: 0,
         duration: 0.15,
         ease: 'power1.inOut',
-        stagger: 0.01,
+        stagger: stagger,
       });
     };
 
@@ -82,5 +82,7 @@ function DoubleTextAnimation({ string, className }) {
     </div>
   );
 }
-
+DoubleTextAnimation.defaultProps = {
+  stagger: 0.01
+}
 export default DoubleTextAnimation;

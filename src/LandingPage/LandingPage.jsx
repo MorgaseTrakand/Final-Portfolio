@@ -4,8 +4,77 @@ import './LandingPage.css';
 import Header from '../Header/Header';
 import ScrollNotice from './ScrollNotice';
 import DoubleTextAnimation from '../HelperComponents/DoubleTextAnimation';
+import { useGSAP } from '@gsap/react';
 
 function LandingPage( { isLoaded } ) {
+  useGSAP(() => {
+    gsap.fromTo('.landingpage-secondary-text', 
+      {
+        autoAlpha: 1,
+        filter: 'blur(0px)',
+        scale: 1
+      },
+      {
+        autoAlpha: 0,
+        scale: 0.8,
+        filter: 'blur(5px)',
+        scrollTrigger: {
+          trigger: ".landing-page",
+          start: "top top",
+          end: "bottom top",
+          scrub: true
+        }
+      }
+    );
+    const scrollNotice = document.querySelector('.scroll-notice');
+    gsap.fromTo('.mask', 
+      {
+        scale: 1
+      },
+      {
+        scale: 0.5,
+        autoAlpha: 0,
+        scrollTrigger: {
+          trigger: ".landing-page",
+          start: "top top",
+          end: "bottom top",
+          scrub: true
+        }
+      }
+    );
+    gsap.fromTo('.topline', 
+      {
+        x: 0,
+        filter: 'blur(0px)',
+      },
+      {
+        x: 300,
+        filter: 'blur(5px)',
+        scrollTrigger: {
+          trigger: ".landing-page",
+          start: "top top",
+          end: "bottom top",
+          scrub: true
+        }
+      }
+    );
+    gsap.fromTo('.bottomline', 
+      {
+        x: 0,
+        filter: 'blur(0px)',
+      },
+      {
+        x: -300,
+        filter: 'blur(5px)',
+        scrollTrigger: {
+          trigger: ".landing-page",
+          start: "top top",
+          end: "bottom top",
+          scrub: true
+        }
+      }
+    )
+  })
   useEffect(() => {
     if (isLoaded) {
       document.querySelector('.landing-page').style.pointerEvents = "all";
@@ -73,7 +142,7 @@ function LandingPage( { isLoaded } ) {
         </div>
         <div className="bottom-half">
             <div className="text-container2">
-                <h2 className="fadetest">
+                <h2 className="landingpage-secondary-text">
                     A freelance web designer working to construct websites and appealing visual experiences 
                 </h2>
             </div>

@@ -57,13 +57,6 @@ function CircularText( { isLoaded } ) {
           }
         )
       })
-      // gsap.to('.radial-one', 
-      //   {
-      //     scale: 20,
-      //     duration: 0.5,
-      //     ease: "power1.inOut"
-      //   }
-      // )
     }
   }, [isLoaded])
 
