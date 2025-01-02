@@ -22,6 +22,9 @@
   align-items: center;
   justify-content: space-between;
 }
+.nav-item-margin {
+  margin-right: 30px;
+}
 .navitem h2 {
   color: var(--fontcolor);
   font-family: "Poppins", sans-serif;

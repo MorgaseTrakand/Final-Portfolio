@@ -12,9 +12,9 @@ function Header( { isLoaded } ) {
             <DoubleTextAnimation string={'ETHAN SNYDER'} className={"logo"} stagger={0.015}/>
           </a>
           <div className="link-container">
-              <div className='navitem'>
+              <div className='navitem nav-item-margin'>
                 <a>
-                  <DoubleTextAnimation string={'Resume'} className={""} stagger={0.03}/>
+                  <DoubleTextAnimation string={'Resume'} className={""} stagger={0.025}/>
                 </a>
               </div>             
               <div className="contact-button navitem">

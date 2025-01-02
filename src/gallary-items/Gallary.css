@@ -1,0 +1,135 @@
+
+.project-container {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  display: flex;
+  z-index: 0;
+  pointer-events: none;
+}
+.project-left, .project-right {
+  z-index: 1;
+  width: 50%;
+  height: 100%;
+  position: relative;
+  pointer-events: none;
+}
+.project-item {
+  height: 108px;
+  width: 192px;
+  top: 0;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  pointer-events: all;
+}
+.project-item-one {
+  z-index: 10;
+  right: 0%;
+  background-image: url('project-images/e4243098-63dc-4fae-ac6d-d134d720676f.png');
+}
+.project-item-two {
+  z-index: 9;
+  left: 0%;
+  background-image: url('project-images/b40e58ae-ceb7-4af6-aec3-c974603c5f3b.png');
+}
+.project-item-three {
+  right: 0%;
+  z-index: 8;
+}
+.project-description {
+  height: 120px;
+  width: 120px;
+  border-radius: 20px;
+  border: 1px solid rgb(88, 88, 88);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  z-index: 20;
+  background-color: #181818;
+  cursor: pointer;
+  z-index: 100;
+  overflow: hidden;
+}
+.project-name-spinner {
+  z-index: 20;
+  position: absolute;
+  bottom: 80px;
+  left: calc(50% + 150px);
+  height: 2em;
+  overflow: hidden;
+}
+.project-name-spinner h1 {
+  color: white;
+  font-size: 20px;
+}
+.spinner-animation-container {
+  position: absolute;
+}
+.cover {
+  height: 95%;
+  width: 95%;
+  position: absolute;
+  top: 2.5%;
+  left: 2.5%;
+  background-color: #181818;
+  z-index: 10;
+  border-radius: 18px;
+}
+.project-description h1 {
+  color: white;
+  transform: rotate(-45deg);
+  font-weight: 400;
+  text-align: center;
+  z-index: 11;
+}
+.project-description  span {
+  position: absolute;
+  background-color: white;
+  height: 10px; /* Adjust border thickness */
+  width: 0; /* Start with zero width */
+  border-radius: 20px;
+}
+
+.project-description .top {
+ top: 0;
+ left: 0;
+ transform-origin: left center;
+ margin: 0 5%;
+}
+
+/* Right span */
+.project-description .right {
+ top: 0;
+ right: 0;
+ height: 0;
+ width: 10px; /* Switch to vertical line */
+ transform-origin: center top;
+ margin: 5% 0;
+}
+
+.project-description .bottom {
+ margin: 0 5%;
+ bottom: 0;
+ right: 0;
+ transform-origin: right center;
+}
+
+.project-description .left {
+ bottom: 0;
+ left: 0;
+ height: 0;
+ margin: 5% 0;
+ width: 10px; /* Switch to vertical line */
+ transform-origin: center bottom;
+}
+
+.block-spacer {
+ height: 25vh;
+}

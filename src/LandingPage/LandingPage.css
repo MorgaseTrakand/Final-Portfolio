@@ -61,7 +61,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text; /* Add for broader support */
-  text-fill-color: transparent;
+  /* text-fill-color: transparent; */
   position: relative;
   background-size: 200% 100%; /* Make the gradient twice as wide as the text */
   animation: shiftBackground2 2.5s linear infinite;
@@ -71,7 +71,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
+  /* text-fill-color: transparent; */
   position: relative;
   background-size: 200% 100%; /* Make the gradient twice as wide as the text */
   animation: shiftBackground 2.5s linear infinite;

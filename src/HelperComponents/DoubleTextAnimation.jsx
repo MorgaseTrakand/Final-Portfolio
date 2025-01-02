@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
-function DoubleTextAnimation({ string, className, stagger }) {
+function DoubleTextAnimation({ string, className = "", stagger = 0.01 }) {
   const maskRef = useRef(null);
   const firstTextRef = useRef(null);
   const secondTextRef = useRef(null);
@@ -81,8 +81,5 @@ function DoubleTextAnimation({ string, className, stagger }) {
       </h2>
     </div>
   );
-}
-DoubleTextAnimation.defaultProps = {
-  stagger: 0.01
 }
 export default DoubleTextAnimation;

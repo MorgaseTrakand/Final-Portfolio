@@ -34,7 +34,7 @@
         {
           scrollTrigger: {
             trigger: '.pinned-text-body',
-            start: "top 20%",
+            start: "top 25%",
             end: "bottom bottom",
             pin: true,
             pinSpacing: false,

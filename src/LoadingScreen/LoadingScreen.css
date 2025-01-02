@@ -57,7 +57,6 @@
   font-weight: 300;
   user-select: none;
   pointer-events: none;
-  /* animation: rotate 60s linear infinite; */
 }
 .circular-text span {
   position: absolute;
@@ -110,4 +109,7 @@ svg path {
   height: 0vw;
   width: 0vw;
   border-radius: 50%;
+}
+.Ethan, .Snyder {
+  z-index: 10;
 }
