@@ -10,9 +10,10 @@ function ThreeJS() {
     <>
       <div className='canvas-container'>
         <Canvas style={{ backgroundColor: "white" }}>
-          <PerspectiveCamera makeDefault fov={70} near={0.1} far={1000} position={[0, 0, -10]} />
-          <directionalLight intensity={3} position={[0, 3, 2]} />
+          <PerspectiveCamera makeDefault fov={70} near={0.1} far={1000} position={[0, 0, -20]} />
+          <directionalLight intensity={1} position={[0, 3, 2]} />
           <Environment preset='warehouse' background={false} />
+          <ambientLight intensity={1.5} />
           <Model />
         </Canvas>
       </div>

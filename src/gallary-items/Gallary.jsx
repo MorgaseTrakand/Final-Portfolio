@@ -102,9 +102,9 @@ const Gallary = () => {
         gsap.to(document.querySelector('.project-container'), 
           {
             scrollTrigger: {
-              trigger: document.querySelector('.project-container'),
-              start: 'top center',
-              end: 'bottom -10%',
+              trigger: document.querySelector('.gallary-container'),
+              start: 'top top',
+              end: 'bottom bottom',
               scrub: true,
               onEnter: () => {
                 document.querySelector('.project-container').style.position = "fixed";
@@ -124,7 +124,8 @@ const Gallary = () => {
       })
       
     return (
-      <div className='project-container'>
+      <div className='gallary-container'>
+        <div className='project-container'>
           <div className='project-left'>
             <ProjectItemOne />
             <ProjectItemThree />
@@ -135,6 +136,7 @@ const Gallary = () => {
           </div>
           <ProjectButton/>
           <NameSpinner />
+        </div>
       </div>
     );
 };

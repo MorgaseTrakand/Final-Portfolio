@@ -12,6 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
 }
 .pinned-text-body h1 {
   font-family: "Poppins", sans-serif;
