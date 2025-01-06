@@ -10,8 +10,8 @@ function HomePage() {
 
   useEffect(() => {
     history.scrollRestoration = 'manual';
-    document.body.style.overflow = 'hidden';
-    document.body.style.height = '100vh';
+    // document.body.style.overflow = 'hidden';
+    // document.body.style.height = '100vh';
     window.scrollTo(0, 0);
 
     const timer = setTimeout(() => {
