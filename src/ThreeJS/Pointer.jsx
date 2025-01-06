@@ -4,7 +4,7 @@ import { BallCollider, RigidBody } from '@react-three/rapier';
 import { useFrame, useThree } from '@react-three/fiber';
 import { EffectComposer, Bloom } from '@react-three/postprocessing';
 
-export default function Pointer() {
+export default function Pointer({ enabled }) {
   const sphere = useRef();
   const api = useRef();
   const { camera } = useThree();
@@ -48,13 +48,16 @@ export default function Pointer() {
         <Bloom intensity={0.2} luminanceThreshold={0.1} luminanceSmoothing={0.9} />
       </EffectComposer> */}
       <RigidBody ref={api} colliders={false} type="kinematicPosition" restitution={1.5}>
-        <BallCollider args={[1]} />
-        <mesh scale={0.2}>
-          <sphereGeometry />
-          <meshBasicMaterial color={[4, 4, 4]} toneMapped={false} />
-
-        <pointLight intensity={20} distance={20} color={"white"} />
-        </mesh>
+        {enabled && (<>
+          <BallCollider args={[1]} />
+            <mesh scale={0.2}>
+              <sphereGeometry />
+              <meshBasicMaterial color={[4, 4, 4]} toneMapped={false} />
+    
+            <pointLight intensity={20} distance={20} color={"white"} />
+            </mesh>
+        </>
+        )}
       </RigidBody>
     </>
   );

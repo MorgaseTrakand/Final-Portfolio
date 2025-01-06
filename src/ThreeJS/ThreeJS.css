@@ -1,4 +1,9 @@
 .canvas-container {
+  height: 300vh;
+  width: 100%;
+}
+.pinned-canvas {
   height: 100vh;
   width: 100%;
+  position: relative;
 }

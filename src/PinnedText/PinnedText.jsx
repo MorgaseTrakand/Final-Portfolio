@@ -31,7 +31,18 @@ function PinnedText( { spans } ) {
           }
         }
       )
+      gsap.to('.pinned-text', {
+        autoAlpha: 0,
+        y: -1200,
+        scrollTrigger: {
+          trigger: '.canvas-container',
+          start: 'top bottom',
+          end: 'bottom 75%',
+          scrub: 'true',
+        }
+      })
     }
+
   }, [spans]);
 
   return (

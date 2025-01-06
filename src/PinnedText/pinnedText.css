@@ -3,6 +3,7 @@
   width: 100%;
   padding: 0 10%;
   position: relative;
+  background-color: #f9f9f9;
 }
 .pinned-text-container {
   position: absolute;

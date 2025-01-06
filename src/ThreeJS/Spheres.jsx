@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { RigidBody, BallCollider } from '@react-three/rapier';
 import { useFrame } from '@react-three/fiber';
 
@@ -8,8 +8,9 @@ export default function Sphere({ num, position, color, roughness, metalness }) {
     const sphere = useRef();
     const api = useRef();
 
-    position = [0, 0, 0]; // Default position (can override via props)
-
+    useEffect(() => {
+      api.current.applyImpulse(new THREE.Vector3(0, 100, 0));
+    })
     useFrame(() => {
         if (api.current) {
             const currentPosition = api.current.translation();
@@ -27,9 +28,10 @@ export default function Sphere({ num, position, color, roughness, metalness }) {
             linearDamping={4}
             angularDamping={1}
             friction={0.1}
+            position={position}
           >
             <BallCollider args={[0.75]} />
-            <mesh position={position} ref={sphere} castShadow receiveShadow>
+            <mesh ref={sphere} castShadow receiveShadow>
                 <sphereGeometry args={[0.75, 64, 64]} />
                 <meshStandardMaterial roughness={roughness} metalness={metalness} color={color} />
             </mesh>
