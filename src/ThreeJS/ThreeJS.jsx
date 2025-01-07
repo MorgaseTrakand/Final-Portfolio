@@ -23,18 +23,6 @@ function ThreeJS() {
         setStart(true)
       },
     })
-
-    gsap.to('.canvas-container', 
-      {
-        scrollTrigger: {
-        trigger: '.canvas-container',
-        start: 'center 50%',
-        markers: true,
-      },
-      onStart: () => {
-        setPointerEnabled(true)
-      }
-    })
   })
 
   return (
@@ -42,7 +30,7 @@ function ThreeJS() {
     
       <div className='canvas-container'>
         <div className="pinned-canvas">
-          <ThreeCanvasComponent start={start} pointerEnabled={pointerEnabled}/>
+          <ThreeCanvasComponent start={start}/>
         </div>
       </div>
     </>    
