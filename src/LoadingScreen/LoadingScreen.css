@@ -41,8 +41,8 @@
   right: 20px;
 }
 .radial-one {
-  height: 90vh;
-  width: 90vh;
+  height: 90vmin;
+  width: 90vmin;
   background-color: #FCFCFC;
   border-radius: 50%;
   display: flex;
@@ -60,9 +60,9 @@
 }
 .circular-text span {
   position: absolute;
-  transform-origin: 0 45vh;
+  transform-origin: 0 45vmin;
   display: inline-block;
-  top: -45vh;
+  top: -45vmin;
 }
 .radial-two {
   height: 90%;
@@ -112,4 +112,9 @@ svg path {
 }
 .Ethan, .Snyder {
   z-index: 10;
+}
+@media (max-width: 600px) {
+  .Ethan, .Snyder {
+    width: 40vw;
+  }
 }

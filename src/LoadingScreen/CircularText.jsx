@@ -23,7 +23,6 @@ function CircularText( { isLoaded } ) {
 
   useEffect(() => {
     if (isLoaded) {
-      console.log('loaded')
       gsap.killTweensOf('.circular-text');
       const currentRotation = getCurrentRotation(document.querySelector('.circular-text')) + 360;
       const data = { originValue: 35 };
@@ -50,9 +49,9 @@ function CircularText( { isLoaded } ) {
             duration: 0.9,
             ease: "power1.inOut",
             onUpdate: () => {
-              const transformOrigin = `0 ${data.originValue}vh`;
+              const transformOrigin = `0 ${data.originValue}vmin`;
               span.style.transformOrigin = transformOrigin;
-              span.style.top = `-${data.originValue}vh`;
+              span.style.top = `-${data.originValue}vmin`;
             }
           }
         )
@@ -100,9 +99,9 @@ function CircularText( { isLoaded } ) {
           opacity: 1,
           duration: 0.8,
           onUpdate: () => {
-            const transformOrigin = `0 ${data.originValue}vh`;
+            const transformOrigin = `0 ${data.originValue}vmin`;
             span.style.transformOrigin = transformOrigin;
-            span.style.top = `-${data.originValue}vh`;
+            span.style.top = `-${data.originValue}vmin`;
           }
         }
       )

@@ -4,8 +4,8 @@
   --fontcolor: #1A1A1A;
 }
 .landing-page {
-  mask: radial-gradient(circle, black 0vw, transparent 0vw);
-  -webkit-mask: radial-gradient(circle, black 0vw, transparent 0vw);
+  mask: radial-gradient(circle, black 0vmax, transparent 0vmax);
+  -webkit-mask: radial-gradient(circle, black 0vmax, transparent 0vmax);
   mask-size: 100%;
   -webkit-mask-size: 100%;
   -webkit-mask-border: 1px solid black;

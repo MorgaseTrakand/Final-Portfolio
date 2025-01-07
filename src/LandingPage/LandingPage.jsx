@@ -87,10 +87,10 @@ function LandingPage( { isLoaded } ) {
           duration: 1,
           ease: "power1.inOut",
           onUpdate: () => {
-            maskBorder.style.height = `${maskPercentage.percent+0.15}vw`
-            maskBorder.style.width = `${maskPercentage.percent+0.15}vw`
-            maskElement.style.mask = `radial-gradient(circle, black ${maskPercentage.percent/2}vw, transparent 0vw)`;
-            maskElement.style.webkitMask = `radial-gradient(circle, black ${maskPercentage.percent/2}vw, transparent 0vw)`;
+            maskBorder.style.height = `${maskPercentage.percent+0.15}vmax`
+            maskBorder.style.width = `${maskPercentage.percent+0.15}vmax`
+            maskElement.style.mask = `radial-gradient(circle, black ${maskPercentage.percent/2}vmax, transparent 0vmax)`;
+            maskElement.style.webkitMask = `radial-gradient(circle, black ${maskPercentage.percent/2}vmax, transparent 0vmax)`;
           }
         }
       )
