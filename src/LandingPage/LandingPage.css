@@ -187,3 +187,15 @@
       font-size: 16px;
   }
 }
+
+@media (min-width: 2000px) {
+  .top-half h1 {
+    font-size: 120px;
+  }
+  .bottom-half h2 {
+    font-size: 32px;
+  }
+  .scroll-notice {
+    font-size: 22px;
+  }
+}

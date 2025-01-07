@@ -87,3 +87,9 @@
     font-size: 18px;
   }
 }
+
+@media (min-width: 2000px) {
+  .letter {
+    font-size: 100px;
+  }
+}

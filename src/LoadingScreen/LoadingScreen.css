@@ -49,6 +49,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 .circular-text {
   font-family: Poppins, sans-serif;
@@ -72,6 +73,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 svg path {
   fill: transparent;
@@ -112,9 +114,18 @@ svg path {
 }
 .Ethan, .Snyder {
   z-index: 10;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.4));
 }
 @media (max-width: 600px) {
   .Ethan, .Snyder {
     width: 40vw;
+  }
+}
+@media (min-width: 2000px) {
+  .Ethan, .Snyder {
+    width: 600px;
+  }
+  .corner-text {
+    font-size: 22px;
   }
 }
