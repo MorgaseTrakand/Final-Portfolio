@@ -119,6 +119,15 @@ svg path {
 @media (max-width: 600px) {
   .Ethan, .Snyder {
     width: 40vw;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+  }
+  .radial-one {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.025);
+  }
+  .radial-two {
+    height: 85%;
+    width: 85%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   }
 }
 @media (min-width: 2000px) {
