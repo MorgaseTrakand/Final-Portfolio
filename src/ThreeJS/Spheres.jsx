@@ -4,14 +4,14 @@ import { RigidBody, BallCollider } from '@react-three/rapier';
 import { useFrame } from '@react-three/fiber';
 
 
-export default function Sphere({ num, position = [0, 0, 0], color, roughness, metalness, enabled }) {
+export default function Sphere({ num, position = [0, 0, 0], color, roughness, metalness, currentCenter }) {
     const sphere = useRef();
     const api = useRef();
 
     useFrame(() => {
-        if (api.current && enabled) {
+        if (api.current) {
             const currentPosition = api.current.translation();
-            const directionToOrigin = new THREE.Vector3(0, 0, 0).sub(currentPosition).normalize();
+            let directionToOrigin = currentCenter.clone().sub(currentPosition).normalize();
             const impulseStrength = 1;
             api.current.applyImpulse(directionToOrigin.multiplyScalar(impulseStrength), true);
         }

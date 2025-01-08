@@ -10,7 +10,7 @@ import { Text } from '@react-three/drei';
 import { useState, useEffect } from 'react';
 
 
-function ThreeCanvasComponent( { start } ) {
+function ThreeCanvasComponent( { currentCenter } ) {
   const spheresData = [
     { color: 'white', roughness: 0.1, metalness: 0.0, position: [0.5, -8, 0] },
     { color: 'white', roughness: 0.2, metalness: 0.0, position: [1, -8, 2] },
@@ -37,9 +37,9 @@ function ThreeCanvasComponent( { start } ) {
   return (
     <>
       <Canvas style={{ backgroundColor: "#f9f9f9" }}>
-        {/* <Text color="black" anchorX="center" anchorY="middle" textAlign='center'>
+        <Text color="black" anchorX="center" anchorY="middle" textAlign='center'>
           Eye-Catching{'\n'}3D Animations
-        </Text> */}
+        </Text>
         <EffectComposer disableNormalPass multisampling={0}>
           <N8AO halfRes color="black" aoRadius={2} intensity={1} aoSamples={6} denoiseSamples={4} />
           <Bloom mipmapBlur levels={7} intensity={0.2} />
@@ -57,7 +57,7 @@ function ThreeCanvasComponent( { start } ) {
               roughness={sphere.roughness}
               metalness={sphere.metalness}
               position={sphere.position}
-              enabled={start}
+              currentCenter={currentCenter}
               />
           ))}
           <Pointer/>

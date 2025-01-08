@@ -3,11 +3,12 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { useState } from "react";
+import * as THREE from 'three';
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
 function ThreeJS() {
-  const [start, setStart] = useState(false);
+  const [currentCenter, setCurrentCenter] = useState(new THREE.Vector3(0, 9, 0));
   const [pointerEnabled, setPointerEnabled] = useState(false);
 
   useGSAP(() => {
@@ -18,9 +19,18 @@ function ThreeJS() {
         end: 'bottom bottom',
         scrub: 'true',
         pin: '.pinned-canvas',
+        onEnter: () => {
+        setCurrentCenter(new THREE.Vector3(0, 0, 0))
       },
-      onStart: () => {
-        setStart(true)
+      onEnterBack: () => {
+        setCurrentCenter(new THREE.Vector3(0, 0, 0))
+      },
+      onLeave: () => {
+        setCurrentCenter(new THREE.Vector3(0, 9, 0))
+      },
+      onLeaveBack: () => {
+        setCurrentCenter(new THREE.Vector3(0, -9, 0))
+      }
       },
     })
   })
@@ -30,7 +40,7 @@ function ThreeJS() {
     
       <div className='canvas-container'>
         <div className="pinned-canvas">
-          <ThreeCanvasComponent start={start}/>
+          <ThreeCanvasComponent currentCenter={currentCenter}/>
         </div>
       </div>
     </>    
