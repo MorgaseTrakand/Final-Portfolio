@@ -5,9 +5,10 @@ import Sphere from './Spheres';
 import { Environment } from '@react-three/drei';
 import { Physics, RigidBody } from '@react-three/rapier';
 import Pointer from './Pointer'
-import { EffectComposer, N8AO, SMAA, Bloom } from '@react-three/postprocessing';
+import { EffectComposer, N8AO, SMAA, Bloom, Noise, Outline, SSAO } from '@react-three/postprocessing';
 import { Text } from '@react-three/drei';
 import { useState, useEffect } from 'react';
+
 
 function ThreeCanvasComponent( { start } ) {
   const spheresData = [
@@ -36,13 +37,14 @@ function ThreeCanvasComponent( { start } ) {
   return (
     <>
       <Canvas style={{ backgroundColor: "#f9f9f9" }}>
-        <Text color="black" anchorX="center" anchorY="middle">
-          Eye-Catching 3D Animations
-        </Text>
+        {/* <Text color="black" anchorX="center" anchorY="middle" textAlign='center'>
+          Eye-Catching{'\n'}3D Animations
+        </Text> */}
         <EffectComposer disableNormalPass multisampling={0}>
           <N8AO halfRes color="black" aoRadius={2} intensity={1} aoSamples={6} denoiseSamples={4} />
           <Bloom mipmapBlur levels={7} intensity={0.2} />
           <SMAA />
+          <Outline edgeStrength={10} pulseSpeed={20} visibleEdgeColor="yellow" />
         </EffectComposer>
 
 

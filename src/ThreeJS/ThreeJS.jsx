@@ -17,7 +17,7 @@ function ThreeJS() {
         start: 'top top',
         end: 'bottom bottom',
         scrub: 'true',
-        pin: true,
+        pin: '.pinned-canvas',
       },
       onStart: () => {
         setStart(true)

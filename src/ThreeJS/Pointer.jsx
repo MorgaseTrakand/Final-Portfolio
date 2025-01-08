@@ -2,7 +2,6 @@ import * as THREE from 'three';
 import { useRef, useState, useEffect } from 'react';
 import { BallCollider, RigidBody } from '@react-three/rapier';
 import { useFrame, useThree } from '@react-three/fiber';
-import { EffectComposer, Bloom } from '@react-three/postprocessing';
 
 export default function Pointer() {
   const sphere = useRef();
@@ -43,9 +42,6 @@ export default function Pointer() {
 
   return (
     <>
-      {/* <EffectComposer>
-        <Bloom intensity={0.2} luminanceThreshold={0.1} luminanceSmoothing={0.9} />
-      </EffectComposer> */}
       <RigidBody ref={api} colliders={false} type="kinematicPosition" restitution={1.5}>
         <BallCollider args={[1]} />
         <mesh scale={0.2}>

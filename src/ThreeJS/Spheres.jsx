@@ -8,15 +8,11 @@ export default function Sphere({ num, position = [0, 0, 0], color, roughness, me
     const sphere = useRef();
     const api = useRef();
 
-    // useEffect(() => {
-    //   api.current.applyImpulse(new THREE.Vector3(0, 100, 0));
-    // })
-
     useFrame(() => {
         if (api.current && enabled) {
             const currentPosition = api.current.translation();
             const directionToOrigin = new THREE.Vector3(0, 0, 0).sub(currentPosition).normalize();
-            const impulseStrength = 1; // Adjust impulse strength
+            const impulseStrength = 1;
             api.current.applyImpulse(directionToOrigin.multiplyScalar(impulseStrength), true);
         }
     });

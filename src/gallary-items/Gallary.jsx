@@ -11,43 +11,7 @@ import './Gallary.css';
 gsap.registerPlugin(ScrollTrigger);
 
 const Gallary = () => {
-      useEffect(() => {
-        const blocks = document.querySelectorAll('.block');
-        blocks.forEach(block => {
-            gsap.fromTo(block, 
-              {
-                backgroundColor: "#181818",
-              },
-              {
-                backgroundColor: "#0a0a0a",
-                scrollTrigger: {
-                  trigger: document.querySelector('.fourth-block'),
-                  start: 'top bottom',
-                  end: 'top 75%',
-                  scrub: true,
-                }
-            })
-        })
-        const projectItems = document.querySelectorAll('.project-item')
-        projectItems.forEach(item => {
-          item.addEventListener('mouseenter', () => {
-            gsap.to(item, {
-              backgroundSize: "102.5%",
-              duration: 0.6,
-              ease: "power1.out",
-            });
-          })
-        })
-        projectItems.forEach(item => {
-          item.addEventListener('mouseleave', () => {
-            gsap.to(item, {
-              backgroundSize: "100%",
-              duration: 0.8,
-              ease: "power1.out",
-            })
-          })
-        })
-        
+      useEffect(() => {        
         gsap.fromTo(document.querySelector('.project-description'),
           {
             autoAlpha: 0,
@@ -99,6 +63,7 @@ const Gallary = () => {
             toggleActions: "play none none reverse"
           }
         })
+
         gsap.to(document.querySelector('.project-container'), 
           {
             scrollTrigger: {
@@ -106,6 +71,7 @@ const Gallary = () => {
               start: 'top top',
               end: 'bottom bottom',
               scrub: true,
+              // markers: true,
               onEnter: () => {
                 document.querySelector('.project-container').style.position = "fixed";
               },

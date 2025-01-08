@@ -1,18 +1,19 @@
 .pinned-text-body {
   height: 200vh;
   width: 100%;
-  padding: 0 10%;
   position: relative;
   background-color: #f9f9f9;
 }
 .pinned-text-container {
   position: absolute;
-  top: -25vh;
+  top: -50vh;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   pointer-events: none;
+  width: 90%;
+  margin-left: 5%;
 }
 .pinned-text-body h1 {
   font-family: "Poppins", sans-serif;

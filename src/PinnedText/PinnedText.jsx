@@ -25,15 +25,15 @@ function PinnedText( { spans } ) {
           },
           scrollTrigger: {
             trigger: '.pinned-text-body',
-            start: 'top 25%',
+            start: 'top 50%',
             end: 'bottom bottom',
-            scrub: 'true'
+            scrub: 'true',
           }
         }
       )
       gsap.to('.pinned-text', {
         autoAlpha: 0,
-        y: -1200,
+        y: -2000,
         scrollTrigger: {
           trigger: '.canvas-container',
           start: 'top bottom',
