@@ -12,7 +12,7 @@ import { useState, useEffect } from 'react';
 
 function ThreeCanvasComponent( { currentCenter } ) {
   const spheresData = [
-    { color: 'white', roughness: 0.1, metalness: 0.0, position: [0.5, -8, 0] },
+    { color: 'white', roughness: 0.1, metalness: 1.0, position: [0.5, -8, 0] },
     { color: 'white', roughness: 0.2, metalness: 0.0, position: [1, -8, 2] },
     { color: 'white', roughness: 0.1, metalness: 0.0, position: [1.5, -8, 3] },
     { color: 'white', roughness: 0.1, metalness: 0.0, position: [2, -8, 1] },

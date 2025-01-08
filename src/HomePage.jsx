@@ -31,7 +31,7 @@ function HomePage() {
       <LandingPage isLoaded={isLoaded} />
       <PinnedTextContainer />
       <ThreeJS />
-      <Gallary />
+      {/* <Gallary /> */}
     </>
   );
 }
