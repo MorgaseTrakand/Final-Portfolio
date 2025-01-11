@@ -29,7 +29,7 @@ export default function Sphere({ num, position = [0, 0, 0], color, roughness, me
           >
             <BallCollider args={[0.75]} />
             <mesh ref={sphere} castShadow receiveShadow>
-                <sphereGeometry args={[0.75, 64, 64]} />
+                <sphereGeometry args={[0.75, 32, 32]} />
                 <meshStandardMaterial roughness={roughness} metalness={metalness} color={color} />
             </mesh>
           </RigidBody>

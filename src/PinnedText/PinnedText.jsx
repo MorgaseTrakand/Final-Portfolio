@@ -33,11 +33,10 @@ function PinnedText( { spans } ) {
       )
       gsap.to('.pinned-text', {
         autoAlpha: 0,
-        y: -2000,
         scrollTrigger: {
           trigger: '.canvas-container',
           start: 'top bottom',
-          end: 'bottom 75%',
+          end: 'top center',
           scrub: 'true',
         }
       })
