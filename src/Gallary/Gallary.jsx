@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from '@gsap/react';
 import './Gallary.css';
 import ProjectButton from './ProjectButton';
+import NameSpinner from './NameSpinner';
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
 
@@ -32,7 +33,7 @@ const Gallary = () => {
             scrollTrigger: {
               trigger: '.gallary-container',
               start: 'top top',
-              // end: 'bottom bottom',
+              end: 'bottom bottom',
               toggleActions: "play reverse play reverse"
             }
           }
@@ -43,6 +44,7 @@ const Gallary = () => {
       <div className='gallary-container'>
         <div className='project-container'>
           <ProjectButton/>
+          <NameSpinner/>
         </div>
       </div>
     );

@@ -24,7 +24,7 @@ function ThreeJS() {
     gsap.from('.three-background-text-h1', 
       {
         y: 180,
-        duration: 0.4,
+        duration: 0.5,
         rotation: 8,
         scrollTrigger: {
           trigger: '.canvas-container',
@@ -40,7 +40,9 @@ function ThreeJS() {
         start: 'top center',
         end: 'bottom bottom',
         onEnter: () => {
-        setCurrentCenter(new THREE.Vector3(0, 0, 0))
+          setTimeout(() => {
+            setCurrentCenter(new THREE.Vector3(0, 0, 0));
+          }, 200); // 500ms delay
         },
         onEnterBack: () => {
           setCurrentCenter(new THREE.Vector3(0, 0, 0))

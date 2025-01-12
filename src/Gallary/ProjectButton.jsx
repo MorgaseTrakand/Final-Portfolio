@@ -19,7 +19,7 @@ const ProjectButton = () => {
           width: '90%',
           ease: 'none'
         })
-        .to('.right', {
+        .to('.right-progress', {
           height: '90%',
           ease: 'none'
         })
@@ -27,7 +27,7 @@ const ProjectButton = () => {
           width: '90%',
           ease: 'none'
         }) 
-        .to('.left', {
+        .to('.left-progress', {
           height: '90%',
           ease: 'none'
         })
@@ -38,9 +38,9 @@ const ProjectButton = () => {
         <div className="cover"></div>
         <h1>Projects</h1>
         <span className="top"></span>
-        <span className="right"></span>
+        <span className="right-progress"></span>
         <span className="bottom"></span>
-        <span className="left"></span>
+        <span className="left-progress"></span>
       </button>
     );
 };

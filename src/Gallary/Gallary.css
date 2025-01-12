@@ -6,13 +6,12 @@
 .project-container {
   height: 100vh;
   width: 100%;
-  background-color: antiquewhite;
 }
 .project-description {
   height: 120px;
   width: 120px;
   border-radius: 20px;
-  border: 1px solid rgb(88, 88, 88);
+  /* border: 1px solid rgb(88, 88, 88); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,10 +20,11 @@
   left: 50%;
   transform: translateX(-50%) rotate(45deg);
   z-index: 20;
-  background-color: #181818;
+  background-color: rgb(255, 255, 255);
   cursor: pointer;
   z-index: 100;
   overflow: hidden;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.08); */
 }
 .cover {
   height: 95%;
@@ -32,20 +32,25 @@
   position: absolute;
   top: 2.5%;
   left: 2.5%;
-  background-color: #181818;
+  background-color: white;
   z-index: 10;
   border-radius: 18px;
 }
 .project-description h1 {
   color: white;
+  color: black;
   transform: rotate(-45deg);
   font-weight: 400;
   text-align: center;
   z-index: 11;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
 }
 .project-description  span {
   position: absolute;
   background-color: white;
+  background-color: gold;
   height: 10px;
   width: 0;
   border-radius: 20px;
@@ -59,7 +64,7 @@
 }
 
 /* Right span */
-.project-description .right {
+.project-description .right-progress {
  top: 0;
  right: 0;
  height: 0;
@@ -75,11 +80,26 @@
  transform-origin: right center;
 }
 
-.project-description .left {
+.project-description .left-progress {
  bottom: 0;
  left: 0;
- height: 0;
+ height: 0px;
  margin: 5% 0;
  width: 10px;
  transform-origin: center bottom;
+}
+.project-name-spinner {
+  z-index: 20;
+  position: absolute;
+  bottom: 80px;
+  left: calc(50% + 150px);
+  height: 2em;
+  overflow: hidden;
+}
+.project-name-spinner h1 {
+  color: black;
+  font-size: 20px;
+}
+.spinner-animation-container {
+  position: absolute;
 }

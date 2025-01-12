@@ -29,3 +29,8 @@
 .three-background-text-mask {
   overflow: hidden;
 }
+@media (min-width: 2000px) {
+  .three-background-text h1 {
+    font-size: 85px;
+  }
+}
