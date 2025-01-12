@@ -8,7 +8,7 @@ gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
 function ThreeJS() {
-  const [currentCenter, setCurrentCenter] = useState(new THREE.Vector3(0, 9, 0));
+  const [currentCenter, setCurrentCenter] = useState(new THREE.Vector3(0, -9, 0));
   const [pointerEnabled, setPointerEnabled] = useState(false);
 
   useGSAP(() => {

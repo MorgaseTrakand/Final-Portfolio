@@ -3,7 +3,8 @@ import LoadingScreen from './LoadingScreen/LoadingScreen';
 import LandingPage from './LandingPage/LandingPage';
 import PinnedTextContainer from './PinnedText/PinnedTextContainer';
 import ThreeJS from './ThreeJS/ThreeJS';
-import Gallary from './Gallary/Gallary'
+import Gallary from './Gallary/Gallary';
+import FooterSection from './Footer/Footer';
 
 function HomePage() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -32,6 +33,7 @@ function HomePage() {
       <PinnedTextContainer />
       <ThreeJS />
       <Gallary />
+      <FooterSection />
     </>
   );
 }
