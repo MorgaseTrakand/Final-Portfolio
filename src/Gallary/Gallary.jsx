@@ -56,7 +56,7 @@ const Gallary = () => {
             <ProjectItemFour />
           </div>
           <ProjectButton/>
-          {/* <NameSpinner/> */}
+          <NameSpinner/>
         </div>
       </div>
     );

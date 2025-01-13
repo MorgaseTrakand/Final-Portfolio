@@ -33,7 +33,7 @@ function HomePage() {
       <PinnedTextContainer />
       <ThreeJS />
       <Gallary />
-      {/* <FooterSection /> */}
+      <FooterSection />
     </>
   );
 }

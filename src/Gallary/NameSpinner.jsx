@@ -26,7 +26,7 @@ const NameSpinner = () => {
           top: 0
         },
         {
-          top: '-1em',
+          top: '-1.5em',
           ease: "power1.inOut",
           duration: 0.4,
           scrollTrigger: {
@@ -37,24 +37,38 @@ const NameSpinner = () => {
         })
         gsap.fromTo('.spinner-animation-container',
           {
-            top: '-1em'
+            top: '-1.5em'
           },
           {
-            top: '-2em',
+            top: '-3em',
             ease: "power1.inOut",
             duration: 0.4,
             scrollTrigger: {
               trigger: '.gallary-container',
-              start: "top -50%",
+              start: "top -30%",
               toggleActions: "play none none reverse"
             }
           })
           gsap.fromTo('.spinner-animation-container',
             {
-              top: '-2em'
+              top: '-3em'
             },
             {
-              top: '-3em',
+              top: '-4.25em',
+              ease: "power1.inOut",
+              duration: 0.4,
+              scrollTrigger: {
+                trigger: '.gallary-container',
+                start: "top -60%",
+                toggleActions: "play none none reverse",
+              }
+          })
+          gsap.fromTo('.spinner-animation-container',
+            {
+              top: '-4.5em'
+            },
+            {
+              top: '-6em',
               ease: "power1.inOut",
               duration: 0.4,
               scrollTrigger: {
@@ -62,7 +76,8 @@ const NameSpinner = () => {
                 start: "top -100%",
                 toggleActions: "play none none reverse",
               }
-            })
+            }
+          )
       })
       
     return (

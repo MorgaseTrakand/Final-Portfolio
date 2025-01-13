@@ -97,7 +97,7 @@
   position: absolute;
   bottom: 80px;
   left: calc(50% + 150px);
-  height: 2em;
+  /* height: 2em; */
   overflow: hidden;
 }
 .project-name-spinner h1 {
@@ -130,4 +130,5 @@
   z-index: 1;
   pointer-events: all;
   background-color: black;
+  background-color: white;
 }
