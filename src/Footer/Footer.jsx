@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber';
-import ThreeJSText from './ThreeJSText';
+import Scene from './ThreeJSText';
 import './footer.css';
 
 function FooterSection() {
@@ -7,8 +7,20 @@ function FooterSection() {
       <div className='footer-container'>
         <div className='final-cta-container'>
           <div className='final-cta-border'>
-            <ThreeJSText />
-            {/* <h1 className='final-cta-text'><span className='gold-text'>Let's</span> Create <br/> Something <span className='gold-text'>Special</span></h1> */}
+            <Canvas
+              dpr={[1, 2]}
+              gl={{
+                antialias: true,
+                preserveDrawingBuffer: true,
+              }}
+              camera={{
+                fov: 55,
+                near: 0.1,
+                far: 200,
+              }}
+            >
+              <Scene />
+            </Canvas>          
           </div>
         </div>
         <footer>

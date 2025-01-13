@@ -1,4 +1,4 @@
-let vertex = `
+let vertexShader = `
 uniform float time;
 uniform vec2 uMouse;
 
@@ -22,12 +22,4 @@ void main() {
 	vUv = uv;
 }
 `
-vertex = `
-varying vec2 vUv;
-
-void main() {
-    vUv = uv; // Pass UV coordinates to the fragment shader
-    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-}
-`
-export default vertex;
+export default vertexShader;

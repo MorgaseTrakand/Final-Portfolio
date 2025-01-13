@@ -27,7 +27,6 @@ function DoubleTextAnimation({ string, className = "", stagger = 0.01 }) {
 
     // Add event listeners for hover animation
     const handleMouseEnter = () => {
-      console.log(firstSpans)
       gsap.to(firstSpans, {
         y: '-100%',
         duration: 0.15,

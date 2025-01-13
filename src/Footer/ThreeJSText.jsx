@@ -1,31 +1,79 @@
-import { Html } from "@react-three/drei";
-import { useThree, Canvas, useFrame } from "@react-three/fiber";
-import { useState, useEffect, useRef, useMemo } from "react";
-import html2canvas from "html2canvas";
-import * as THREE from "three";
-import fragment from "./shaders/fragment";
-import vertex from "./shaders/vertex";
-import CustomShaderMaterial from "three-custom-shader-material";
+import { useRef, useMemo, useEffect, useState } from "react";
+import { useControls } from "leva";
+import { debounce } from "lodash";
 
-function ThreeJSContent() {
-  const [domEl, setDomEl] = useState(null);
-  const { viewport } = useThree();
-  const materialRef = useRef();
-  const [texture, setTexture] = useState(null);
-  useDomToCanvas(domEl, setTexture, texture);
+// 3D
+import * as THREE from "three";
+import { PointLightHelper } from "three";
+import { useFrame, useThree } from "@react-three/fiber";
+import { useHelper, Html } from "@react-three/drei";
+import CustomShaderMaterial from "three-custom-shader-material";
+import vertexShader from "./shaders/vertex.js";
+import fragmentShader from "./shaders/fragment.js";
+import html2canvas from "html2canvas";
+
+const useDomToCanvas = (domEl) => {
+  const [texture, setTexture] = useState();
   useEffect(() => {
-    if (texture) {
-      console.log("Texture is loaded:", texture);
-    }
-  }, [texture]);
+    if (!domEl) return;
+    const convertDomToCanvas = async () => {
+      const canvas = await html2canvas(domEl, { backgroundColor: null });
+      setTexture(new THREE.CanvasTexture(canvas));
+    };
+
+    convertDomToCanvas();
+
+    const debouncedResize = debounce(() => {
+      convertDomToCanvas();
+    }, 100);
+
+    window.addEventListener("resize", debouncedResize);
+    return () => {
+      window.removeEventListener("resize", debouncedResize);
+    };
+  }, [domEl]);
+
+  return texture;
+};
+
+function Lights() {
+  const pointLightRef = useRef();
+
+  const config = {
+    color: "#ffffff",
+    intensity: { value: 20, min: 0, max: 5000, step: 0.01 },
+    distance: { value: 12, min: 0, max: 100, step: 0.1 },
+    decay: { value: 1, min: 0, max: 5, step: 0.1 },
+    position: { value: [2, 4, 6] },
+  };
+  return <pointLight ref={pointLightRef} {...config} />;
+}
+
+function Scene() {
+  const state = useThree();
+  const { width, height } = state.viewport;
+  const [domEl, setDomEl] = useState(null);
+
+  const materialRef = useRef();
+  const textureDOM = useDomToCanvas(domEl);
 
   const uniforms = useMemo(
     () => ({
-      uTexture: { value: texture },
+      uTexture: { value: textureDOM },
       uMouse: { value: new THREE.Vector2(0, 0) },
     }),
-    [texture]
+    [textureDOM]
   );
+
+  const mouseLerped = useRef({ x: 0, y: 0 });
+
+  useFrame((state, delta) => {
+    const mouse = state.mouse;
+    mouseLerped.current.x = THREE.MathUtils.lerp(mouseLerped.current.x, mouse.x, 0.1);
+    mouseLerped.current.y = THREE.MathUtils.lerp(mouseLerped.current.y, mouse.y, 0.1);
+    materialRef.current.uniforms.uMouse.value.x = mouseLerped.current.x;
+    materialRef.current.uniforms.uMouse.value.y = mouseLerped.current.y;
+  });
 
   return (
     <>
@@ -37,40 +85,21 @@ function ThreeJSContent() {
           </h1>
         </div>
       </Html>
-      {texture && <mesh>
-        <planeGeometry args={[viewport.width, viewport.height, 254, 254]} />
+      <mesh>
+        <planeGeometry args={[width, height, 254, 254]} />
         <CustomShaderMaterial
           ref={materialRef}
           baseMaterial={THREE.MeshStandardMaterial}
-          vertexShader={vertex}
-          fragmentShader={fragment}
+          vertexShader={vertexShader}
+          fragmentShader={fragmentShader}
           uniforms={uniforms}
           flatShading
+          silent
         />
-      </mesh>}
+        <Lights />
+      </mesh>
     </>
   );
 }
 
-
-function  ThreeJSText() {
-  return (
-    <Canvas>
-      <ThreeJSContent />
-    </Canvas>
-  );
-}
-export default ThreeJSText;
-
-
-
-const useDomToCanvas = (domEl, setTexture, texture) => {
-  useEffect(() => {
-    if (!domEl) return;
-    const convertDomToCanvas = async () => {
-      const canvas = await html2canvas(domEl, { backgroundColor: null });
-      setTexture(new THREE.CanvasTexture(canvas));
-    };
-    convertDomToCanvas();
-  }, [domEl]);
-};
+export default Scene;

@@ -19,7 +19,7 @@ function Header( { isLoaded } ) {
               </div>             
               <div className="contact-button navitem">
                 <div className='navitem'>
-                  <a>
+                  <a href="mailto:edsnyder1@geneva.edu">
                     <DoubleTextAnimation string={'Contact'} className={""} stagger={0.025}/>
                   </a>
               </div>
