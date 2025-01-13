@@ -1,3 +1,5 @@
+import { Canvas } from '@react-three/fiber';
+import ThreeJSText from './ThreeJSText';
 import './footer.css';
 
 function FooterSection() {
@@ -5,7 +7,8 @@ function FooterSection() {
       <div className='footer-container'>
         <div className='final-cta-container'>
           <div className='final-cta-border'>
-            <h1 className='final-cta-text'><span className='gold-text'>Let's</span> Create <br/> Something <span className='gold-text'>Special</span></h1>
+            <ThreeJSText />
+            {/* <h1 className='final-cta-text'><span className='gold-text'>Let's</span> Create <br/> Something <span className='gold-text'>Special</span></h1> */}
           </div>
         </div>
         <footer>

@@ -16,9 +16,12 @@
     "@react-three/postprocessing": "^2.16.5",
     "@react-three/rapier": "^1.5.0",
     "gsap": "^3.12.5",
+    "html2canvas": "^1.4.1",
+    "lodash": "^4.17.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "three": "^0.171.0"
+    "three": "^0.171.0",
+    "three-custom-shader-material": "^6.2.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

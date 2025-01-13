@@ -14,7 +14,7 @@ const Gallary = () => {
           {
             scrollTrigger: {
               trigger: '.gallary-container',
-              start: 'top top',
+              start: 'top center',
               end: 'bottom bottom',
               pin: '.project-container',
             },
@@ -32,7 +32,7 @@ const Gallary = () => {
             ease: "power1.inOut",
             scrollTrigger: {
               trigger: '.gallary-container',
-              start: 'top top',
+              start: 'top center',
               end: 'bottom bottom',
               toggleActions: "play reverse play reverse"
             }
@@ -43,8 +43,8 @@ const Gallary = () => {
     return (
       <div className='gallary-container'>
         <div className='project-container'>
-          <ProjectButton/>
-          <NameSpinner/>
+          {/* <ProjectButton/>
+          <NameSpinner/> */}
         </div>
       </div>
     );

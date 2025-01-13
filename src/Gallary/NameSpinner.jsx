@@ -7,7 +7,7 @@ const NameSpinner = () => {
       useEffect(() => {
        gsap.fromTo('.spinner-animation-container', 
         {
-          top: '2em',
+          top: '1em',
           autoAlpha: 0
         },
         {
@@ -17,7 +17,7 @@ const NameSpinner = () => {
           duration: 0.4,
           scrollTrigger: {
             trigger: '.gallary-container',
-            start: "top top",
+            start: "top center",
             toggleActions: "play none none reverse",
           } 
        })
@@ -26,42 +26,40 @@ const NameSpinner = () => {
           top: 0
         },
         {
-          top: '-2em',
+          top: '-1em',
           ease: "power1.inOut",
           duration: 0.4,
           scrollTrigger: {
             trigger: '.gallary-container',
-            start: "top -50%",
+            start: "top top",
             toggleActions: "play none none reverse"
           }
         })
         gsap.fromTo('.spinner-animation-container',
           {
-            top: '-2em'
+            top: '-1em'
           },
           {
-            top: '-4em',
+            top: '-2em',
             ease: "power1.inOut",
             duration: 0.4,
             scrollTrigger: {
-              trigger: document.querySelector('.fourth-block'),
-              start: "bottom 70%",
-              end: "bottom 70%",
+              trigger: '.gallary-container',
+              start: "top -50%",
               toggleActions: "play none none reverse"
             }
           })
           gsap.fromTo('.spinner-animation-container',
             {
-              top: '-4em'
+              top: '-2em'
             },
             {
-              top: '-6em',
+              top: '-3em',
               ease: "power1.inOut",
               duration: 0.4,
               scrollTrigger: {
-                trigger: document.querySelector('.fourth-block'),
-                start: "bottom 40%",
-                end: "bottom 40%",
+                trigger: '.gallary-container',
+                start: "top -100%",
                 toggleActions: "play none none reverse",
               }
             })
