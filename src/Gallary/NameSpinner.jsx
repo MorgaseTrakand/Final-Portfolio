@@ -54,7 +54,7 @@ const NameSpinner = () => {
               top: '-3em'
             },
             {
-              top: '-4.25em',
+              top: '-4.55em',
               ease: "power1.inOut",
               duration: 0.4,
               scrollTrigger: {
@@ -65,10 +65,10 @@ const NameSpinner = () => {
           })
           gsap.fromTo('.spinner-animation-container',
             {
-              top: '-4.5em'
+              top: '-4.55em'
             },
             {
-              top: '-6em',
+              top: '-6.1em',
               ease: "power1.inOut",
               duration: 0.4,
               scrollTrigger: {
