@@ -9,7 +9,7 @@ const ProjectButton = () => {
           {
             scrollTrigger: {
               trigger: ".gallary-container",
-              start: "top top",
+              start: "top center",
               end: "bottom bottom",
               scrub: true,
             },

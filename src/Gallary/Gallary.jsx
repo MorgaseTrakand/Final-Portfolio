@@ -5,6 +5,10 @@ import { useGSAP } from '@gsap/react';
 import './Gallary.css';
 import ProjectButton from './ProjectButton';
 import NameSpinner from './NameSpinner';
+import ProjectItemOne from './ItemOne';
+import ProjectItemTwo from './ItemTwo';
+import ProjectItemThree from './ItemThree';
+import ProjectItemFour from './ItemFour';
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
 
@@ -43,8 +47,16 @@ const Gallary = () => {
     return (
       <div className='gallary-container'>
         <div className='project-container'>
-          {/* <ProjectButton/>
-          <NameSpinner/> */}
+          <div className='project-left'>
+            <ProjectItemOne />
+            <ProjectItemThree />
+          </div>
+          <div className='project-right'>
+            <ProjectItemTwo />
+            <ProjectItemFour />
+          </div>
+          <ProjectButton/>
+          {/* <NameSpinner/> */}
         </div>
       </div>
     );
