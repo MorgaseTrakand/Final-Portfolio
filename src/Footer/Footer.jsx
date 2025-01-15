@@ -14,7 +14,9 @@ function Footer() {
           <h2 className='footer-middle'>Copyright © 2025. All Rights Reserved.</h2>
         </div>
         <div>
-          <h2 className='footer-right'>LinkedIn</h2>
+          <a className="linkedin" target="_blank" href="https://www.linkedin.com/in/ethan-snyder30/">
+            <h2 className='footer-right'>LinkedIn</h2>
+          </a>
         </div>
       </footer>
   )

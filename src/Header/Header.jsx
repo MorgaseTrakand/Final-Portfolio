@@ -13,7 +13,7 @@ function Header( { isLoaded, id='' } ) {
           </a>
           <div className="link-container">
               <div className='navitem nav-item-margin'>
-                <a>
+                <a target="_blank" href="https://www.linkedin.com/in/ethan-snyder30/overlay/1736959145455/single-media-viewer/?profileId=ACoAAEb9fHQB2ZaY1h2zgR7gh12vDhx7UoT6lTw">
                   <DoubleTextAnimation string={'Resume'} className={""} stagger={0.025}/>
                 </a>
               </div>             

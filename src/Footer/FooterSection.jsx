@@ -71,7 +71,7 @@ function FooterSection() {
         duration: 0.8,
         scrollTrigger: {
           trigger: '.footer-displaced-top',
-          start: 'top 1%',
+          start: 'top top',
           toggleActions: 'play reverse play reverse'
         }
       }

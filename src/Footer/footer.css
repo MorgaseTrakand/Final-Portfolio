@@ -100,3 +100,6 @@ footer h2 {
   height: 12vh;
   width: 100%;
 }
+.linkedin {
+  cursor: pointer;
+}
