@@ -48,12 +48,12 @@ const Gallary = () => {
       <div className='gallary-container'>
         <div className='project-container'>
           <div className='project-left'>
-            <ProjectItemOne />
-            <ProjectItemThree />
+            <a target='_blank' href="https://portfolio-site-4tfl.onrender.com"><ProjectItemOne/></a>
+            <a target='_blank' href="https://algorithm-visualizer-losf.onrender.com"><ProjectItemThree/></a>
           </div>
           <div className='project-right'>
-            <ProjectItemTwo />
-            <ProjectItemFour />
+            <a target='_blank' href=""><ProjectItemTwo/></a>
+            <a target='_blank' href=""><ProjectItemFour/></a>
           </div>
           <ProjectButton/>
           <NameSpinner/>
