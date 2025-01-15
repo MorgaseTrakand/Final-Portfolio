@@ -69,8 +69,9 @@ const NameSpinner = () => {
             },
             {
               top: '-6.1em',
+              autoAlpha: 0,
               ease: "power1.inOut",
-              duration: 0.4,
+              duration: 0.3,
               scrollTrigger: {
                 trigger: '.gallary-container',
                 start: "top -100%",

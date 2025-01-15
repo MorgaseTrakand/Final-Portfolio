@@ -67,7 +67,7 @@ function DoubleTextAnimation({ string, className = "", stagger = 0.01 }) {
   }, []);
 
   return (
-    <div ref={maskRef} className="mask" style={{ position: 'relative', overflow: 'hidden' }}>
+    <div ref={maskRef} className="double-text-animation-mask" style={{ position: 'relative', overflow: 'hidden' }}>
       <h2 ref={firstTextRef} className={`double-animation-text ${className}`}>
         {string}
       </h2>

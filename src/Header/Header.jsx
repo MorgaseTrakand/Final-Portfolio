@@ -3,10 +3,10 @@ import gsap from 'gsap';
 import DoubleTextAnimation from '../HelperComponents/DoubleTextAnimation';
 import './Header.css'
 
-function Header( { isLoaded } ) {
+function Header( { isLoaded, id='' } ) {
 
   return (
-    <div className="header">
+    <div className="header" id={id}>
       <div className="header-wrapper">
           <a>
             <DoubleTextAnimation string={'ETHAN SNYDER'} className={"logo"} stagger={0.015}/>

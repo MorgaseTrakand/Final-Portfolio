@@ -48,11 +48,6 @@
     font-size: 45px;
   }
 }
-@media (max-width: 1150px) {
-  .pinned-text-body {
-    padding: 0 5%;
-  }
-}
 @media (max-width: 1050px) {
   .letter {
     font-size: 40px;
@@ -73,9 +68,6 @@
   }
 }
 @media (max-width: 750px) {
-  .pinned-text-body {
-    padding: 0 7.5%;
-  }
   .letter {
     font-size: 25px;
   }

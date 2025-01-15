@@ -94,7 +94,7 @@
 .scroll-hidden span, .scroll-notice span {
   display: inline-block;
 }
-.absolutely-positioned {
+.scroll-notice-absolutely-positioned {
   position: absolute;
   width: 100%;
   bottom: 3vh;

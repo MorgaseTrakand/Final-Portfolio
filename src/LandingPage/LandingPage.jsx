@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react';
 import gsap from 'gsap';
 import './LandingPage.css';
 import Header from '../Header/Header';
-import ScrollNotice from './ScrollNotice';
 import DoubleTextAnimation from '../HelperComponents/DoubleTextAnimation';
 import { useGSAP } from '@gsap/react';
+gsap.registerPlugin(useGSAP);
+
 
 function LandingPage( { isLoaded } ) {
   useGSAP(() => {
@@ -26,8 +27,8 @@ function LandingPage( { isLoaded } ) {
         }
       }
     );
-    const scrollNotice = document.querySelector('.scroll-notice');
-    gsap.fromTo('.mask', 
+
+    gsap.fromTo('.scroll-notice-absolutely-positioned', 
       {
         scale: 1
       },
@@ -147,7 +148,7 @@ function LandingPage( { isLoaded } ) {
                 </h2>
             </div>
         </div>
-        <div className='absolutely-positioned'>
+        <div className='scroll-notice-absolutely-positioned'>
           <DoubleTextAnimation string={'(scroll to discover)'} className={"scroll-notice"}/>
         </div>
       </section> 

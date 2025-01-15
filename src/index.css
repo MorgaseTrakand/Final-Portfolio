@@ -68,3 +68,6 @@ ol {
     font-size: 14px;
   }
 }
+.pin-spacer {
+  pointer-events: none;
+}

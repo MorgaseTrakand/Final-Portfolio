@@ -4,16 +4,16 @@ import LandingPage from './LandingPage/LandingPage';
 import PinnedTextContainer from './PinnedText/PinnedTextContainer';
 import ThreeJS from './ThreeJS/ThreeJS';
 import Gallary from './Gallary/Gallary';
-import FooterSection from './Footer/Footer';
+import FooterSection from './Footer/FooterSection';
 
 function HomePage() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     history.scrollRestoration = 'manual';
-    // document.body.style.overflow = 'hidden';
-    // document.body.style.height = '100vh';
     window.scrollTo(0, 0);
+    document.body.style.overflow = 'hidden';
+    document.body.style.height = '100vh';
 
     const timer = setTimeout(() => {
       setIsLoaded(true);

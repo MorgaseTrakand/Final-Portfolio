@@ -75,7 +75,7 @@
   align-items: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.025);
 }
-svg path {
+.name-container svg path {
   fill: transparent;
   stroke: #FFBF44;
   stroke-width: 2;

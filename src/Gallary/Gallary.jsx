@@ -32,7 +32,7 @@ const Gallary = () => {
           {
             autoAlpha: 1,
             bottom: '40px',
-            duration: 0.4,
+            duration: 0.3,
             ease: "power1.inOut",
             scrollTrigger: {
               trigger: '.gallary-container',
