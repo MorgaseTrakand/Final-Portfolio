@@ -71,7 +71,7 @@ function FooterSection() {
         duration: 0.8,
         scrollTrigger: {
           trigger: '.footer-displaced-top',
-          start: 'top top',
+          start: 'top 1%',
           toggleActions: 'play reverse play reverse'
         }
       }
@@ -96,8 +96,6 @@ function FooterSection() {
                     <h1 className='footer-bottom-line'>Something <span className='gold-text'>Special</span></h1>
                   </div>
                 </div>
-                {/* <h1 className='footer-middle-text'><span className='footer-top-line'><span className='gold-text'>Let's</span> Create</span> <br/>
-                <span className='footer-bottom-line'>Something <span className='gold-text'>Special</span></span></h1>         */}
             </div>
             <div className='footer-container'>
               <Footer></Footer>

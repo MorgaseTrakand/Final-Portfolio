@@ -11,9 +11,9 @@ function HomePage() {
 
   useEffect(() => {
     history.scrollRestoration = 'manual';
-    window.scrollTo(0, 0);
-    document.body.style.overflow = 'hidden';
-    document.body.style.height = '100vh';
+    // window.scrollTo(0, 0);
+    // document.body.style.overflow = 'hidden';
+    // document.body.style.height = '100vh';
 
     const timer = setTimeout(() => {
       setIsLoaded(true);
