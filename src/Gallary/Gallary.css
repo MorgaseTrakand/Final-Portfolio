@@ -137,20 +137,20 @@
 .project-item-one {
   z-index: 10;
   right: 0%;
-  background-image: url('project-images/e4243098-63dc-4fae-ac6d-d134d720676f.png');
+  background-image: url('/project-images/e4243098-63dc-4fae-ac6d-d134d720676f.png');
 }
 .project-item-two {
   z-index: 9;
   left: 0%;
-  background-image: url('project-images/b40e58ae-ceb7-4af6-aec3-c974603c5f3b.png');
+  background-image: url('/project-images/b40e58ae-ceb7-4af6-aec3-c974603c5f3b.png');
 }
 .project-item-three {
   right: 0%;
   z-index: 8;
-  background-image: url('project-images/workinprogress.png');
+  background-image: url('/project-images/workinprogress.png');
 }
 .project-item-four {
   left: 0%;
   z-index: 7;
-  background-image: url('project-images/workinprogress.png');
+  background-image: url('/project-images/workinprogress.png');
 }
