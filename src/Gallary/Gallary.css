@@ -154,3 +154,9 @@
   z-index: 7;
   background-image: url('/project-images/workinprogress.png');
 }
+@media (min-width: 2000px) {
+  .project-item {
+    height: 216px;
+    width: 384px;
+  }
+}
