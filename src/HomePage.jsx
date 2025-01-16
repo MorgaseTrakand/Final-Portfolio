@@ -10,6 +10,7 @@ function HomePage() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
+    
     history.scrollRestoration = 'manual';
     // window.scrollTo(0, 0);
     // document.body.style.overflow = 'hidden';

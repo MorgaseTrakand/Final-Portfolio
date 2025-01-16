@@ -71,3 +71,6 @@ ol {
 .pin-spacer {
   pointer-events: none;
 }
+.gsap-marker-scroll, .gsap-marker-end, .gsap-marker-start, .gsap-marker-scroller-end, .gsap-marker-scroller-start {
+  opacity: 0 !important;
+}

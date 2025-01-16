@@ -23,8 +23,9 @@ function FooterSection() {
         delay: 0.2,
         scrollTrigger: {
           trigger: '.footer-displaced-top',
-          start: 'top top',
-          toggleActions: 'play reverse play reverse'
+          start: 'bottom bottom',
+          toggleActions: 'play reverse play reverse',
+          markers: true
         }
       }
     );
@@ -39,14 +40,18 @@ function FooterSection() {
         duration: 0.4,
         scrollTrigger: {
           trigger: '.footer-displaced-top',
-          start: 'top top',
+          start: 'bottom bottom',
           toggleActions: 'play reverse play reverse'
         }
       }
     );
+    let heightDisplacement = 180; 
+    if (window.innerWidth > 1900) {
+      heightDisplacement = 250;
+    }
     gsap.fromTo('.footer-top-line', 
       {
-        y: 180,
+        y: heightDisplacement,
         rotation: 8,
       },
       {
@@ -55,14 +60,14 @@ function FooterSection() {
         duration: 0.8,
         scrollTrigger: {
           trigger: '.footer-displaced-top',
-          start: 'top top',
+          start: 'bottom bottom',
           toggleActions: 'play reverse play reverse'
         }
       }
     )
     gsap.fromTo('.footer-bottom-line', 
       {
-        y: -180,
+        y: -heightDisplacement,
         rotation: 8,
       },
       {
@@ -71,8 +76,8 @@ function FooterSection() {
         duration: 0.8,
         scrollTrigger: {
           trigger: '.footer-displaced-top',
-          start: 'top top',
-          toggleActions: 'play reverse play reverse'
+          start: 'bottom bottom',
+          toggleActions: 'play reverse play reverse',
         }
       }
     )
