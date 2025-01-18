@@ -35,9 +35,6 @@ function FooterSection() {
           start: 'top top',
           toggleActions: 'play reverse play reverse',
         },
-        onComplete: () => {
-          console.log('wtf')
-        }
       }
     );
     gsap.fromTo('footer',
@@ -51,7 +48,7 @@ function FooterSection() {
         duration: 0.4,
         scrollTrigger: {
           trigger: '.footer-displaced-top',
-          start: 'bottom bottom',
+          start: 'top top',
           toggleActions: 'play reverse play reverse',
         }
       }
@@ -87,7 +84,7 @@ function FooterSection() {
         duration: 0.8,
         scrollTrigger: {
           trigger: '.footer-displaced-top',
-          start: 'bottom bottom',
+          start: 'top top',
           toggleActions: 'play reverse play reverse',
         }
       }
@@ -95,6 +92,7 @@ function FooterSection() {
   })
 
   return (
+    <>
       <div className='footer-body'>
         <div className='footer-displaced-top'>
           <div className='relative-wrapper'>
@@ -120,6 +118,8 @@ function FooterSection() {
           </div>
         </div>
       </div>    
+      <div className='gsap-spacer'></div>
+    </>
   )
 }
 export default FooterSection;

@@ -49,7 +49,7 @@ const Gallary = () => {
         <div className='project-container'>
           <div className='project-left'>
             <a target='_blank' href="https://portfolio-site-4tfl.onrender.com"><ProjectItemOne/></a>
-            <a target='_blank' href="https://algorithm-visualizer-losf.onrender.com"><ProjectItemThree/></a>
+            <a target='_blank' href="https://algorithm-visualizer-losf.onrender.com/quick-sort"><ProjectItemThree/></a>
           </div>
           <div className='project-right'>
             <a target='_blank' href=""><ProjectItemTwo/></a>
