@@ -1,5 +1,6 @@
 .pinned-text-body {
   height: 200vh;
+  height: calc(var(--vh, 1vh) * 200);
   width: 100%;
   position: relative;
   background-color: #f9f9f9;
@@ -8,6 +9,7 @@
   position: absolute;
   top: -50vh;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,10 +28,6 @@
 }
 .pinned-text-body h1 span {
   display: inline-block;
-}
-.onevh {
-  height: 100vh;
-  background-color: aliceblue;
 }
 .letter:nth-child(1) {
   /* transform: rotateX(80deg) translateY(-100px); */

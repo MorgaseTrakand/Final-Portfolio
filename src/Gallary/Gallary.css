@@ -1,10 +1,12 @@
 .gallary-container {
   height: 200vh;
+  height: calc(var(--vh, 1vh) * 200);
   width: 100%;
   position: relative;
 }
 .project-container {
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   width: 100%;
   position: absolute;
   top: -50vh;
@@ -28,7 +30,6 @@
   cursor: pointer;
   z-index: 100;
   overflow: hidden;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.08); */
 }
 .cover {
   height: 95%;

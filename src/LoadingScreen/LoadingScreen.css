@@ -1,12 +1,13 @@
 .position-absolute {
   position: absolute;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   width: 100%;
   top: 0;
   left: 0;
 }
 .loading-screen-body {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: relative;
   display: flex;

@@ -34,7 +34,6 @@ function FooterSection() {
           trigger: '.footer-displaced-top',
           start: 'top top',
           toggleActions: 'play reverse play reverse',
-          markers: true
         },
         onComplete: () => {
           console.log('wtf')
