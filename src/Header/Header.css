@@ -82,3 +82,11 @@ a {
     padding: 10px 24px;
   }
 }
+@media (max-width: 600px) {
+  .logo {
+    font-size: 30px;
+  }
+  .resume {
+    display: none;
+  }
+}

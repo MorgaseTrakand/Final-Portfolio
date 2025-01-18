@@ -135,23 +135,7 @@
       font-size: calc(112.5% + 0.8vw);
   }
 }
-@media screen and (max-width: 720px) {
-  .link-container {
-      display: none !important;
-  }
-  .hamburger {
-      display: flex !important;
-      flex-direction: column-reverse;
-      justify-content: space-between;
-  }
-}
 @media screen and (max-width: 512px) {
-  .cursor {
-      display: none;
-  }
-  .cursor-small {
-      display: none;
-  }
   .top-half h1 {
       font-weight: 400;
   }

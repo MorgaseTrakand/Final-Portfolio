@@ -14,7 +14,7 @@ function Header( { isLoaded, id='' } ) {
           <div className="link-container">
               <div className='navitem nav-item-margin'>
                 <a target="_blank" href="https://github.com/MorgaseTrakand/Final-Portfolio/blob/main/public/Ethan-Snyder-Resume.pdf">
-                  <DoubleTextAnimation string={'Resume'} className={""} stagger={0.025}/>
+                  <DoubleTextAnimation string={'Resume'} className={"resume"} stagger={0.025}/>
                 </a>
               </div>             
               <div className="contact-button navitem">
