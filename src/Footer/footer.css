@@ -1,12 +1,13 @@
 .footer-body {
-  height: 25vh;
-  height: 25dvh;
+  height: 50vh;
+  height: 50dvh;
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 .footer-displaced-top {
   position: absolute;
-  top: -75vh;
+  top: -50vh;
   width: 100%;
   height: 100vh;
   height: 100dvh;
@@ -102,4 +103,22 @@ footer h2 {
 }
 .linkedin {
   cursor: pointer;
+}
+.mobile-footer {
+  flex-direction: column;
+  justify-content: center;
+}
+.mobile-footer-top {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.mobile-linkedin h2 {
+  margin-left: 0;
+}
+.mobile-footer-middle {
+  font-size: 14px;
+}
+.mobile-svg {
+  margin-right: 0 !important;
 }

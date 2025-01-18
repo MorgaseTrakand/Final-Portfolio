@@ -160,3 +160,23 @@
     width: 384px;
   }
 }
+@media (max-width: 600px) {
+  .project-item {
+    height: calc(108px * 0.6);
+    width: calc(384px * 0.5 * 0.6);
+  }
+  .project-description {
+    height: 100px;
+    width: 100px; 
+  }
+  .project-description h1 {
+    font-size: 18px;
+  }
+  .project-name-spinner {
+    display: none;
+  }
+  .project-left, .project-right {
+    width: 100%;
+    position: absolute;
+  }
+}

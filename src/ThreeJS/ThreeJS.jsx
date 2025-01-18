@@ -64,7 +64,7 @@ function ThreeJS() {
         <div className="pinned-canvas">
           <div className="three-background-text">
             <div className="three-background-text-mask">
-              <h1 className="three-background-text-h1">Eye-Catching <span className="gold-text">3D Animations</span></h1>
+              <h1 className="three-background-text-h1">Interactive <span className="gold-text">3D Animations</span></h1>
             </div>
           </div>
           <ThreeCanvasComponent currentCenter={currentCenter}/>

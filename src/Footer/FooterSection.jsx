@@ -1,7 +1,9 @@
 import './footer.css';
 import Header from '../Header/Header';
 import Footer from './Footer';
+import MobileFooter from './MobileFooter';
 import gsap from 'gsap';
+import { useEffect, useState } from 'react';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 
@@ -9,6 +11,13 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
 
 function FooterSection() {
+  const [mobile, setMobile] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth < 600) {
+      setMobile(true);
+    }
+  })
 
   useGSAP(() => {
     gsap.fromTo('#footer-header',
@@ -23,9 +32,12 @@ function FooterSection() {
         delay: 0.2,
         scrollTrigger: {
           trigger: '.footer-displaced-top',
-          start: 'bottom bottom',
+          start: 'top top',
           toggleActions: 'play reverse play reverse',
           markers: true
+        },
+        onComplete: () => {
+          console.log('wtf')
         }
       }
     );
@@ -41,7 +53,7 @@ function FooterSection() {
         scrollTrigger: {
           trigger: '.footer-displaced-top',
           start: 'bottom bottom',
-          toggleActions: 'play reverse play reverse'
+          toggleActions: 'play reverse play reverse',
         }
       }
     );
@@ -103,7 +115,8 @@ function FooterSection() {
                 </div>
             </div>
             <div className='footer-container'>
-              <Footer></Footer>
+              {!mobile && <Footer/>}
+              {mobile && <MobileFooter/>}
             </div>
           </div>
         </div>
