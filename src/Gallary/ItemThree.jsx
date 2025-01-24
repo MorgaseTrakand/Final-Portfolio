@@ -43,7 +43,7 @@ const ProjectItemThree = () => {
       )
       })
     return (
-        <div className='project-item project-item-three'></div>
+        <div aria-label='Algorithm Visualizer Site' className='project-item project-item-three'></div>
     );
 };
 

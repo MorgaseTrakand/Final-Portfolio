@@ -43,7 +43,7 @@ const ProjectItemTwo = () => {
       )
       })
     return (
-        <div className='project-item project-item-two'></div>
+        <div aria-label='Spotify Stats Website' className='project-item project-item-two'></div>
     );
 };
 

@@ -44,7 +44,7 @@ const ProjectItemOne = () => {
         )
       })
     return (
-        <div className='project-item project-item-one'></div>
+        <div aria-label='Old Portfolio Website Image' className='project-item project-item-one'></div>
     );
 };
 

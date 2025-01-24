@@ -83,11 +83,11 @@ const NameSpinner = () => {
       
     return (
       <div className='project-name-spinner'>
-        <h1 className='invisible'>Old Portfolio Concept</h1>
+        <h1 className='invisible'>Algorithm Sorting Site</h1>
         <div className='spinner-animation-container'>
-          <h1>Old Portfolio Concept</h1>
+          <h1>Old Portfolio Site</h1>
           <h1>Spotify Stats Project</h1>
-          <h1>Work in Progress</h1>
+          <h1>Algorithm Sorting Site</h1>
           <h1>Work in Progress</h1>
         </div>
       </div>

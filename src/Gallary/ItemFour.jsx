@@ -43,7 +43,7 @@ const ProjectItemFour = () => {
       )
       })
     return (
-        <div className='project-item project-item-four'></div>
+        <div aria-label='work in progress image' className='project-item project-item-four'></div>
     );
 };
 
