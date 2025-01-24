@@ -138,22 +138,22 @@
 .project-item-one {
   z-index: 10;
   right: 0%;
-  background-image: url('/project-images/portfolio-site-4tfl.onrender.com_.png');
+  background-image: url('/project-images/portfolio-site-4tfl.onrender.com_.webp');
 }
 .project-item-two {
   z-index: 9;
   left: 0%;
-  background-image: url('/project-images/b40e58ae-ceb7-4af6-aec3-c974603c5f3b.png');
+  background-image: url('/project-images/b40e58ae-ceb7-4af6-aec3-c974603c5f3b.webp');
 }
 .project-item-three {
   right: 0%;
   z-index: 8;
-  background-image: url('/project-images/algorithm-visualizer-losf.onrender.com_quick-sort.png');
+  background-image: url('/project-images/algorithm-visualizer-losf.onrender.com_quick-sort.webp')
 }
 .project-item-four {
   left: 0%;
   z-index: 7;
-  background-image: url('/project-images/workinprogress.png');
+  background-image: url('/project-images/workinprogress.webp');
 }
 @media (min-width: 2000px) {
   .project-item {
