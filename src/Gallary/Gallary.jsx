@@ -53,7 +53,7 @@ const Gallary = () => {
           </div>
           <div className='project-right'>
             <a aria-label='Link to Github Repo for Spotify Project' target='_blank' href="https://github.com/MorgaseTrakand/spotify-stats-express"><ProjectItemTwo/></a>
-            <a aria-label='Work in Progress' target='_blank'><ProjectItemFour/></a>
+            <div><ProjectItemFour/></div>
           </div>
           <ProjectButton/>
           <NameSpinner/>

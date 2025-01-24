@@ -2,12 +2,17 @@ import * as THREE from 'three';
 import { useEffect, useRef } from 'react';
 import { RigidBody, BallCollider } from '@react-three/rapier';
 import { useFrame } from '@react-three/fiber';
+import { useProgress } from '@react-three/drei';
 
 
 export default function Sphere({ num, position = [0, 0, 0], color, roughness, metalness, currentCenter }) {
     const sphere = useRef();
     const api = useRef();
+    // const { active, progress, errors, item, loaded, total } = useProgress()
 
+    // useFrame(() => {
+    //   console.log(progress)
+    // })
     useFrame(() => {
         if (api.current) {
             const currentPosition = api.current.translation();

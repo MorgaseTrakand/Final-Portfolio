@@ -7,9 +7,8 @@ import * as THREE from 'three';
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
-function ThreeJS() {
+function ThreeJS({ setSceneLoaded }) {
   const [currentCenter, setCurrentCenter] = useState(new THREE.Vector3(0, -9, 0));
-  const [pointerEnabled, setPointerEnabled] = useState(false);
 
   useGSAP(() => {
     gsap.to('.canvas-container', {
@@ -67,7 +66,7 @@ function ThreeJS() {
               <h1 className="three-background-text-h1">Interactive <span className="gold-text">3D Animations</span></h1>
             </div>
           </div>
-          <ThreeCanvasComponent currentCenter={currentCenter}/>
+          <ThreeCanvasComponent currentCenter={currentCenter} setSceneLoaded={setSceneLoaded}/>
         </div>
       </div>
     </>    
